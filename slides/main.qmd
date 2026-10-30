@@ -1,0 +1,31 @@
+---
+title: "Analyse critique et traitement automatique du cadastre ancien pour décrire l’évolution des parcelles et des repères géographiques"
+author:
+  - name: "Solenn Tual"
+    affiliations:
+      - "Centre INRIA de l’Université Grenoble-Alpes"
+      - "Thèse réalisée au LASTIG, Université Gustave Eiffel, IGN-Géodata Paris"
+date: 2026-11-16
+date-format: short
+lang: fr
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    width: 1600
+    height: 900
+    #margin-top: 0.06
+    #margin-bottom: 0.05
+    #margin-left: 0.04
+    #margin-right: 0.04
+    slide-number: true
+    toc-depth: 1
+    toc-title: "Plan"
+---
+
+{{< include intro.qmd >}}
+{{< include p1.qmd >}}
+{{< include p2.qmd >}}
+{{< include p3.qmd >}}
+{{< include p4.qmd >}}
+{{< include p5.qmd >}}
+{{< include conclu.qmd >}}

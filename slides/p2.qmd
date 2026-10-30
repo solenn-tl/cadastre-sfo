@@ -1,0 +1,22 @@
+# II. L'ontologie TABULAE
+Un vocabulaire unique pour décrire le corpus cadastral et son contenu sur le temps long
+
+## Rappel: structures hétérogène des tables cadastrales
+
+## Tabulae
+* PeGazUs: un vocabulaire plus vaste pour représenter des entités géographiques, adresses et leur évolution
+
+## Méthode
+
+## A. Repères géographiques et leur évolution
+* Mettre image du recueil
+
+## B. Contribuables
+* Mettre image du recueil
+
+## C. Documents cadastraux
+* Changements de folios
+* Glossaire des termes spécifiques
+
+## Et après ?
+* Objective: to organise temporally fragmented, unordered and potentially ambiguous mentions of geographical entities extracted from heterogeneous sources?

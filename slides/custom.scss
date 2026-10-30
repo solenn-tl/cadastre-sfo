@@ -1,0 +1,22 @@
+/*-- scss:defaults --*/
+
+$presentation-font-size-root: 32px;
+$presentation-h1-font-size: 2em;
+$presentation-h2-font-size: 1.5em;
+$presentation-h3-font-size: 1.2em;
+
+/*-- scss:rules --*/
+
+.reveal .slides section {
+  padding: 0;
+}
+
+.reveal h2 {
+  margin-bottom: 0.4em;
+}
+
+// Keep figures and plotly outputs within the slide height
+.reveal .slides section .cell-output-display,
+.reveal .slides section .plotly-graph-div {
+  max-height: 100%;
+}

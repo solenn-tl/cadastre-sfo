@@ -1,0 +1,96 @@
+# I. Le cadastre ancien: documents, problématiques et zones d'études
+
+## Vue d'ensemble des documents
+* 
+
+## Parcourir le corpus cadastral: exemple
+
+## D'un corpus hétérogène...
+* Exemples de tableaux annotés avec les colonnes
+
+## ...vers une structure uniformisée ?
+* Exemple de la colonne 
+
+## Questions de recherche
+1. Comment représenter les connaissances sur les parcelles et leur évolution de façon homogène à partir de documents hétérogènes ?
+2. Quel méthode utiliser pour organiser ces connaissances isolées sur chaque parcelle selon une logique adaptée à l'échelle de leurs propriétés (contribuable, nature, adresse etc.)?
+3. Comment extraire automatiquement les informations à partir des tables manuscrites (contenu et à la structure variable) ?
+
+## Contributions principales
+1. développement d'un vocabulaire (ontologie)
+2. développement processus d'organisation 
+    * connaissances éparses -> connaissances liées et organisées
+3. développement processus d'extraction et d'annotation avec l'ontologie
+    * image -> connaissances
+
+## Documents cadastraux numérisés
+* Inventaire réalisé au printemps 2024, partiellement actualisé en 2025 et 2026.
+```{python}
+#| echo: false
+import pandas as pd
+import plotly.express as px
+
+df = pd.read_csv("../data/inventaires_des_cadastres_anciens_en_ligne.csv")
+
+cols = [
+    "Plans nap (TA + P)",
+    "Etats de sections",
+    "Matrices"
+]
+
+# Count non-empty cells (ignoring whitespace-only values)
+counts = df[cols].apply(lambda s: s.astype("string").str.strip().replace("", pd.NA).notna().sum())
+
+fig = px.bar(
+    x=counts.index,
+    y=counts.values,
+    text=counts.values,
+    labels={"x": "Document", "y": "Nombre de départements"},
+)
+#Add a title
+fig.update_layout(title_text="Type de document cadastral", title_x=0.5)
+fig.update_traces(textposition="outside", cliponaxis=False)
+fig.update_layout(xaxis_tickangle=-35, height=600, margin=dict(t=60, b=20, l=40, r=20))
+fig.show()
+```
+
+## Zones d'études
+* Carte
+
+### Gentilly
+* Département actuel: Val-de-Marne ; anciennement: Seine.
+* Deux cadastres:
+    * - :
+    * - :
+* Portion nord du territoire initial annexée à Paris en XX
+|Plan parcellaire|Etat de section|Matrices|
+|--|--|--|
+|V|X|V|
+-> Etats de sections manquants (partie Nord <i>a minima</i>)
+* Etude centrée sur le quartier situé entre la Butte-aux-Cailles et la place d'Italie
+
+### L'Haÿ
+* Département actuel: Val-de-Marne ; anciennement: Seine.
+* Deux cadastres:
+    * - :
+    * - :
+* Etude centrée sur une section
+|Plan parcellaire|Etat de section|Matrices|
+|--|--|--|
+|V|V|V|
+
+### Mont-Dauphin
+* Département: Hautes-Alpes
+* Un cadastre ancien (-)
+* Etude centrée sur la commune
+|Plan parcellaire|Etat de section|Matrices|
+|--|--|--|
+|V|V|V|
+
+### Ouessant
+* Département: Finistère
+* Un cadastre ancien (1842-1975)
+* Etude centrée sur plusieurs quartiers
+|Plan parcellaire|Etat de section|Matrices|
+|--|--|--|
+|V|V|X|

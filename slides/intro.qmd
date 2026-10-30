@@ -1,0 +1,19 @@
+# Introduction
+
+## Contexte
+### Création de référentiels de données spatio-temporels
+* Suivre l'évolution de l'occupation du sol
+    * Pas de sources avec une résolution temporelle fine avant la Seconde Guerre mondiale
+* Dater les bâtiments
+    * Données déclaratives
+
+## Contexte
+* Quelles sources documentaires utiliser pour accéder à ces informations sur le temps long ?
+=> Le cadastre ancien
+
+## Création et utilité du cadastre parcellaire au 19ème siècle
+* Date et objectif de création
+
+## Problématiques de recherche
+* Comment extraire automatiquement des connaissances sur les parcelles à partir de documents cadastraux anciens ?
+* Comment organiser et structurer ces connaissances suivant une logique spatio-temporelle qui permette de rendre accessible l'évolution des parcelles, des bâtiments et autres repères géographiques sur le temps long ?
