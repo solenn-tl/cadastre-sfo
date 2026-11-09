@@ -8,8 +8,12 @@ author:
 date: 2026-11-16
 date-format: short
 lang: fr
+filters:
+  - incremental-slides.lua
 format:
   revealjs:
+    incremental: true
+    css: custom.scss
     theme: [default, custom.scss]
     width: 1600
     height: 900
@@ -20,6 +24,8 @@ format:
     slide-number: true
     toc-depth: 1
     toc-title: "Plan"
+    include-after-body: steps-header.html
+    embed-resources: true
 ---
 
 {{< include intro.qmd >}}

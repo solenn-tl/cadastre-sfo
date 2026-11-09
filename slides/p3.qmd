@@ -1,4 +1,4 @@
-# III. Organisation des connaissances
+# III. Reconstitution de l'évolution des entités {data-short="III. Evolution des entités"}
 
 ## Point de départ
 * Connaissances extraites des documents et structurées selon notre vocabulaire

@@ -1,0 +1,50 @@
+<script>
+// Builds the steps bar from the level-1 sections of the deck.
+// A step is labelled by the section's data-short attribute, or by its title otherwise.
+window.addEventListener("load", function () {
+  function init() {
+    var slides = Reveal.getSlides();
+    var sections = slides.filter(function (s) { return s.classList.contains("level1"); });
+
+    var nav = document.createElement("nav");
+    nav.className = "steps-header";
+    nav.setAttribute("aria-label", "Plan");
+
+    var links = sections.map(function (section) {
+      var link = document.createElement("a");
+      var title = section.querySelector("h1");
+      link.textContent = section.dataset.short || title.textContent;
+      link.title = title.textContent;
+      link.href = "#";
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        var indices = Reveal.getIndices(section);
+        Reveal.slide(indices.h, indices.v);
+      });
+      nav.appendChild(link);
+      return link;
+    });
+
+    Reveal.getRevealElement().appendChild(nav);
+
+    function update() {
+      var current = slides.indexOf(Reveal.getCurrentSlide());
+      var active = -1;
+      sections.forEach(function (section, i) {
+        if (slides.indexOf(section) <= current) active = i;
+      });
+      links.forEach(function (link, i) {
+        link.classList.toggle("active", i === active);
+      });
+      // No step is active before the first section, i.e. on the title slide
+      nav.classList.toggle("hidden", active === -1);
+    }
+
+    Reveal.on("slidechanged", update);
+    update();
+  }
+
+  if (Reveal.isReady()) init();
+  else Reveal.on("ready", init);
+});
+</script>

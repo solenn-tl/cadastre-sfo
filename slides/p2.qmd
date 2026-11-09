@@ -1,4 +1,4 @@
-# II. L'ontologie TABULAE
+# II. L'ontologie TABULAE {data-short="II. Ontologie TABULAE"}
 Un vocabulaire unique pour décrire le corpus cadastral et son contenu sur le temps long
 
 ## Rappel: structures hétérogène des tables cadastrales

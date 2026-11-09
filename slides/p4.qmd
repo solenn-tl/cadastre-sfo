@@ -1,4 +1,4 @@
-# IV. Extraction et structuration automatique des informations
+# IV. Extraction et structuration automatique des informations {data-short="IV. Extraction et structuration"}
 
 ## Processus
 ```mermaid

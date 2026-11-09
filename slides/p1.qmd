@@ -1,15 +1,20 @@
-# I. Le cadastre ancien: documents, problématiques et zones d'études
+# I. Le cadastre ancien: documents, problématiques et zones d'études {data-short="I. Le cadastre ancien"}
 
 ## Vue d'ensemble des documents
 * 
 
 ## Parcourir le corpus cadastral: exemple
 
-## D'un corpus hétérogène...
+## Un corpus hétérogène...
+### Etats de sections
 * Exemples de tableaux annotés avec les colonnes
 
-## ...vers une structure uniformisée ?
-* Exemple de la colonne 
+## Un corpus hétérogène...
+### Matrices
+- 5 grands types de matrices antérieures à la loi de rénovation cadastrale de 1930
+```mermaid
+
+```
 
 ## Questions de recherche
 1. Comment représenter les connaissances sur les parcelles et leur évolution de façon homogène à partir de documents hétérogènes ?
@@ -57,6 +62,7 @@ fig.show()
 ## Zones d'études
 * Carte
 
+## Zones d'études
 ### Gentilly
 * Département actuel: Val-de-Marne ; anciennement: Seine.
 * Deux cadastres:
@@ -69,6 +75,7 @@ fig.show()
 -> Etats de sections manquants (partie Nord <i>a minima</i>)
 * Etude centrée sur le quartier situé entre la Butte-aux-Cailles et la place d'Italie
 
+## Zones d'études
 ### L'Haÿ
 * Département actuel: Val-de-Marne ; anciennement: Seine.
 * Deux cadastres:
@@ -79,6 +86,7 @@ fig.show()
 |--|--|--|
 |V|V|V|
 
+## Zones d'études
 ### Mont-Dauphin
 * Département: Hautes-Alpes
 * Un cadastre ancien (-)
@@ -87,6 +95,7 @@ fig.show()
 |--|--|--|
 |V|V|V|
 
+## Zones d'études
 ### Ouessant
 * Département: Finistère
 * Un cadastre ancien (1842-1975)
