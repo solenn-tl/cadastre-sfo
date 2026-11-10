@@ -5,10 +5,12 @@
 <div class="highlight"><center><strong>Reconstitution automatique de la généalogie des parcelles et des bâtiments à partir de sources historiques</strong></center></div>
 
 ::: {.nonincremental}
-* Sciences et Technologies de l'Information Géographique
+* Mention <i>Sciences et Technologies de l'Information Géographique</i>
+* <a href="https://www.umr-lastig.fr/">Laboratoire LASTIG</a>, Université Gustave Eiffel, IGN-Géodata Paris
 * Co-financement Institut National de l'Information Géographique et Forestière (IGN) et Agence d'Innovation de Défense (AID)
-* Laboratoire LASTIG, Université Gustave Eiffel, IGN-Géodata Paris
-* <a href="https://theses.fr/2025UEFL2118" target="_blank">theses.fr/2025UEFL2118</a>
+* Support technique de <a href="https://www.teklia.com/">Teklia</a>.
+* Publication des <a href="https://solenn-tl.github.io/#resources">données et codes</a> suivant les principes de la science ouverte.
+* Manuscrit : <a href="https://theses.fr/2025UEFL2118" target="_blank">theses.fr/2025UEFL2118</a>
 :::
 
 ::: {.notes}
@@ -17,13 +19,35 @@
 
 ## Contexte : production de données spatio-temporelles
 ::: {.nonincremental}
-* Dates de construction, modifications et destructions des bâtiments
+* Dates de construction, modification et destruction des bâtiments.
 :::
 
-<center><img src="images/oc-os.png" height="400px" /></center>
+:::: {.columns .incremental}
+
+::: {.column width="50%"}
+<center>
+    <figure>
+        <figcaption>Carte des dates d'apparition des bâtiments autour de l'IGN. Données : IGN/BDTOPO.</figcaption>
+        <img src="imgs/intro/bd_topo_dates.png" />
+    </figure>
+</center>
+:::
+
+::: {.column width="50%"}
+<center>
+<figure>
+        <img src="imgs/intro/bd_topo_dates.png" />
+        <figcaption>Définitition de la propriété <b>Date d'apparition</b>.<br/>
+        Extrait de la documentation de la <a href="https://bdtopoexplorer.ign.fr/?attr_communs_total#attribute_5">base de données topographique de l'IGN (BDTOPO)</a>.</figcaption>
+</figure>
+</center>
+:::
+
+::::
 
 ::: {.notes}
 - Dates de bâtiments (hors bâtiment inventoriés, inscrits, classés): données déclaratives.
+- Utile pour déterminer les bâtiments nécessitant une mise en conformité au regard des normes d'isolation thermique.
 - Les bases de données actuelles sont incomplètes, comportent des imprécisions et des erreurs.
 :::
 
@@ -32,7 +56,13 @@
 * Evolution de l'occupation et de l'usage du sol
 :::
 
-<center><img src="images/oc-os.png" height="400px" /></center>
+<center>
+<figure>
+    <img src="imgs/intro/hiatus.png" height="580px" />
+    <figcaption>Cartes d'occupation du sol entre 1954 et 1995 produites à partir d'images aériennes. 
+    Source: @hiatus</figcaption>
+</figure>
+</center>
 
 ::: {.notes}
 - Données spatio-temporelles: données géographiques qui permettent de décrire l'évolution d'un territoire sur une période de temps donnée.
@@ -40,12 +70,13 @@
 :::
 
 ## Contexte : production de données spatio-temporelles
-<div class="highlight"><center><strong>Quelles sources documentaires utiliser pour accéder à de telles connaissances ?</strong></center></div>
+<div class="highlight"><center><strong>Quelles sources utiliser pour produire des données spatio-temporelles utiles à l'étude de l'évolution des territoires ?</strong></center></div>
 
-::: {.nonincremental .checklist}
-- [ ] Très grande échelle
-- [ ] Continuité temporelle
-- [ ] Temps long
+::: {.incremental .checklist}
+- [ ] à très grande échelle : parcelle, bâtiment ?
+- [ ] à large couverture : nationale ?
+- [ ] sur le temps long : avant la Seconde Guerre mondiale ?
+- [ ] à haute résolution temporelle : annuelle ?
 :::
 
 ::: {.notes}
@@ -54,38 +85,39 @@
 :::
 
 ## Contexte : production de données spatio-temporelles
-<div class="highlight"><center><strong>Quelles sources documentaires utiliser pour accéder à de telles connaissances ?</strong></center></div>
-
+<div class="highlight"><center><strong>Quelles sources utiliser pour produire des données spatio-temporelles utiles à l'étude de l'évolution des territoires ?</strong></center></div>
 
 ::: {.nonincremental .checklist}
-- [ ] Très grande échelle
-- [ ] Continuité temporelle
-- [ ] Temps long
+- [x] à très grande échelle : parcelle, bâtiment
+- [x] à large couverture : nationale
+- [x] sur le temps long : avant la Seconde Guerre mondiale
+- [x] à haute résolution temporelle : annuelle
 :::
 
-<div class="highlight"><center><strong>Le cadastre ancien / cadastre napoléonien</strong></center></div>
+<div class="bigger-highlight"><center><strong>Le cadastre ancien (napoléonien)</strong></center></div>
 
 ## Le cadastre parcellaire ancien
 
-:::: {.columns}
+Objectif : <strong>rationaliser l'évaluation des revenus fonciers et la perception de l’impôt associé à l'échelle nationale</strong>
 
-::: {.column width="60%"}
-* Objectif : <strong>rationaliser l'évaluation des revenus fonciers et la perception de l’impôt associé à l'échelle nationale</strong>
-* Institué par la loi du 15 septembre 1807.
-* Période de production initiale : 1808 - 1850
-* Période (maximale) d'utilisation : 1808 - 1975(~)
-* Context (économique, politique et juridique) évolutif sur toute la période !
-:::
+:::: {.columns}
 
 ::: {.column width="40%"}
 
 <center>
     <figure>
-        <img src="imgs/intro/gaudin.jpg" height="600px" />
+        <img src="imgs/intro/gaudin.jpg" height="550px" />
         <figcaption>Portrait de Martin-Michel Gaudin, duc de Gaité.<br><a href="https://gallica.bnf.fr/ark:/12148/btv1b8453983r" target="_blank">@ Bibliothèque nationale de France</a></figcaption>
     </figure>
 </center>
 
+:::
+
+::: {.column width="60%"}
+* Institué par la loi du 15 septembre 1807.
+* Période de production des versions initiales : 1808 - 1850
+* Période (maximale) d'utilisation du cadastre ancien : 1808 - 1975(~)
+* Contexte de production et d'utilisation (politique, juridique, et économique) a évolué sur toute la période !
 :::
 
 ::::

@@ -62,7 +62,17 @@ $presentation-h3-font-size: 1.4em;
 .highlight {
   font-size: 40px;
   font-weight: bold;
-  color: rgb(26, 62, 204);
+  color: rgb(23, 52, 168);
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.bigger-highlight {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(23, 52, 168);
   margin-top: 0.5em;
   padding-top: 0.5em;
   margin-bottom: 0.5em;
