@@ -7,6 +7,7 @@
 ::: {.nonincremental}
 * Mention <i>Sciences et Technologies de l'Information Géographique</i>
 * <a href="https://www.umr-lastig.fr/">Laboratoire LASTIG</a>, Université Gustave Eiffel, IGN-Géodata Paris
+    * Encadrement : Nathalie Abadie (LASTIG), Joseph Chazalon (LRE, EPITA), Bertrand Duménieu (CNRS-EHESS) et Julien Perret (directeur de thèse, LASTIG)
 * Co-financement Institut National de l'Information Géographique et Forestière (IGN) et Agence d'Innovation de Défense (AID)
 * Support technique de <a href="https://www.teklia.com/">Teklia</a>.
 * Publication des <a href="https://solenn-tl.github.io/#resources">données et codes</a> suivant les principes de la science ouverte.
@@ -27,8 +28,8 @@
 ::: {.column width="50%"}
 <center>
     <figure>
-        <figcaption>Carte des dates d'apparition des bâtiments autour de l'IGN. Données : IGN/BDTOPO.</figcaption>
-        <img src="imgs/intro/bd_topo_dates.png" />
+        <img src="imgs/intro/bati.png" />
+        <figcaption>Carte des dates d'apparition des bâtiments autour de l'IGN à Saint Mandé.<br/><a href="https://app.urbs.fr/onb/map">Carte U.R.B.S, données MAJIC (CEREMA), 2025</a>.</figcaption>
     </figure>
 </center>
 :::
@@ -36,9 +37,9 @@
 ::: {.column width="50%"}
 <center>
 <figure>
-        <img src="imgs/intro/bd_topo_dates.png" />
-        <figcaption>Définitition de la propriété <b>Date d'apparition</b>.<br/>
-        Extrait de la documentation de la <a href="https://bdtopoexplorer.ign.fr/?attr_communs_total#attribute_5">base de données topographique de l'IGN (BDTOPO)</a>.</figcaption>
+    <img src="imgs/intro/bd_topo_dates.png" />
+    <figcaption>Définitition de la propriété <b>Date d'apparition</b>.<br/>
+    Extrait de la documentation de la <a href="https://bdtopoexplorer.ign.fr/?attr_communs_total#attribute_5">base de données topographique de l'IGN (BDTOPO)</a>.</figcaption>
 </figure>
 </center>
 :::
@@ -53,7 +54,7 @@
 
 ## Contexte : production de données spatio-temporelles
 ::: {.nonincremental}
-* Evolution de l'occupation et de l'usage du sol
+* Evolution de l'occupation et de l'usage du sol.
 :::
 
 <center>
@@ -103,21 +104,20 @@ Objectif : <strong>rationaliser l'évaluation des revenus fonciers et la percept
 :::: {.columns}
 
 ::: {.column width="40%"}
-
 <center>
     <figure>
         <img src="imgs/intro/gaudin.jpg" height="550px" />
-        <figcaption>Portrait de Martin-Michel Gaudin, duc de Gaité.<br><a href="https://gallica.bnf.fr/ark:/12148/btv1b8453983r" target="_blank">@ Bibliothèque nationale de France</a></figcaption>
+        <figcaption>Portrait de Martin-Michel Gaudin, duc de Gaité.<br><a href="https://gallica.bnf.fr/ark:/12148/btv1b8453983r" target="_blank">Source : Bibliothèque Nationale de France</a></figcaption>
     </figure>
 </center>
-
 :::
 
-::: {.column width="60%"}
+::: {.column width="60%" .nonincremental}
 * Institué par la loi du 15 septembre 1807.
 * Période de production des versions initiales : 1808 - 1850
-* Période (maximale) d'utilisation du cadastre ancien : 1808 - 1975(~)
-* Contexte de production et d'utilisation (politique, juridique, et économique) a évolué sur toute la période !
+* Période (maximale) d'utilisation du cadastre ancien : 1808 - 2000
+* Contexte de production et d'utilisation (politique, juridique, et économique) a évolué sur toute la période : cohérence globale, disparités géographiques et temporelles.
+* Composé de plans et de registres.
 :::
 
 ::::
@@ -130,5 +130,31 @@ Objectif : <strong>rationaliser l'évaluation des revenus fonciers et la percept
 :::
 
 ## Problématiques de recherche
-* Comment extraire automatiquement des connaissances sur les parcelles à partir de documents cadastraux anciens ?
-* Comment organiser et structurer ces connaissances suivant une logique spatio-temporelle qui permette de rendre accessible l'évolution des parcelles, des bâtiments et autres repères géographiques sur le temps long ?
+::: {.nonincremental}
+* Comment <b>extraire automatiquement des connaissances</b> sur les parcelles à partir de documents cadastraux anciens ?
+* Comment <b>organiser ces connaissances suivant une logique spatio-temporelle</b> pour reconstruire l'évolution de l'occupation du sol et des bâtiments sur le temps long ?
+
+<center>
+    <figure>
+        <img src="imgs/intro/questions.png"/>
+    </figure>
+</center>
+:::
+
+## Plan
+
+::: {.nonincremental}
+Introduction
+
+1. Le cadastre ancien: documents, problématiques et zones d'études
+
+2. L'ontologie TABULAE: un vocabulaire pour décrire l'évolution des parcelles et le corpus cadastral
+
+3. Reconstitution de l'évolution des parcelles
+
+4. Extraction structurée des connaissances contenues dans le cadastre ancien
+
+5. Exemples complémentaires
+
+Conclusion
+:::

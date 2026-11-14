@@ -1,0 +1,47 @@
+<script>
+// Zoom sur les images : un clic sur une image de slide l'affiche en plein écran.
+// Clic n'importe où ou touche Échap pour fermer.
+// Un seul écouteur délégué, rien n'est créé tant qu'on ne clique pas :
+// aucun impact sur le chargement ni l'affichage des slides.
+// Pour exclure une image : lui ajouter la classe "no-zoom".
+(function () {
+  var overlay = null;
+
+  function close() {
+    if (!overlay) return;
+    var o = overlay;
+    overlay = null;
+    o.classList.remove("visible");
+    setTimeout(function () { o.remove(); }, 200);
+  }
+
+  function open(img) {
+    overlay = document.createElement("div");
+    overlay.className = "img-zoom-overlay";
+    var big = document.createElement("img");
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt || "";
+    overlay.appendChild(big);
+    overlay.addEventListener("click", close);
+    document.body.appendChild(overlay);
+    requestAnimationFrame(function () { overlay.classList.add("visible"); });
+  }
+
+  document.addEventListener("click", function (e) {
+    var img = e.target.closest && e.target.closest(".reveal .slides section img");
+    if (!img || img.classList.contains("no-zoom")) return;
+    e.preventDefault();
+    e.stopPropagation();
+    open(img);
+  });
+
+  // Capture : Échap ferme le zoom sans déclencher la vue d'ensemble de reveal.js,
+  // et les flèches ne changent pas de slide tant que le zoom est ouvert.
+  document.addEventListener("keydown", function (e) {
+    if (!overlay) return;
+    e.stopPropagation();
+    e.preventDefault();
+    if (e.key === "Escape" || e.key === " " || e.key === "Enter") close();
+  }, true);
+})();
+</script>

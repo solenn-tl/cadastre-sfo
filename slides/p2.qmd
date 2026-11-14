@@ -1,22 +1,296 @@
 # II. L'ontologie TABULAE {data-short="II. Ontologie TABULAE"}
-Un vocabulaire unique pour décrire le corpus cadastral et son contenu sur le temps long
-
-## Rappel: structures hétérogène des tables cadastrales
-
-## Tabulae
-* PeGazUs: un vocabulaire plus vaste pour représenter des entités géographiques, adresses et leur évolution
+Un vocabulaire pour décrire l'évolution des parcelles à partir du corpus cadastral
 
 ## Méthode
+::::{.columns}
+::: {.column width="50%" .nonincremental}
+**Au préalable :**
 
-## A. Repères géographiques et leur évolution
-* Mettre image du recueil
+* Analyse des documents cadastraux (Val-de-Marne)
+* Etude de l'histoire du cadastre à partir de travaux d'historiens (création, principales évolutions)
+* Etat de l'art des approches de représentation de l'évolution des entités géographiques (géomatique, informatique)
 
-## B. Contribuables
-* Mettre image du recueil
+:::
+::: {.column width="50%"}
+<figure style="text-align:center">
+    <img src="imgs/p2/recueil_bnf.jpg" height="700px"/>
+    <figcaption>Page de garde du <i>Recueil de 1810</i>. Source : <a href="https://gallica.bnf.fr/ark:/12148/bpt6k96475008#">Bibliothèque nationale de France</a></figcaption>
+</figure>
+:::
+::::
 
-## C. Documents cadastraux
-* Changements de folios
-* Glossaire des termes spécifiques
+## Méthode
+::::{.columns}
+::: {.column width="50%" .nonincremental}
+**Mise en oeuvre (@peroni_samod) :**
+
+1. Rédaction d'une documentation illustrée d'exemples issus du cadastre ancien
+2. Implémentation de l'ontologie dans un langage formel (OWL)
+3. Validation de l'ontologie avec des cas d'usage concrets issus du cadastre ancien (Val-de-Marne)
+:::
+::: {.column width="50%"}
+<figure style="text-align:center">
+    <img src="imgs/p2/scenario.png" height="700px"/>
+    <figcaption>Extrait de la documentation de l'ontologie TABULAE.<br/><a href="https://github.com/solenn-tl/tabulae-ontology">github.com/solenn-tl/tabulae-ontology</a></figcaption>
+</figure>
+:::
+::::
+
+## Repères géographiques et leur évolution
+
+::::{.columns}
+:::{.column width="50%" .nonincremental}
+* Réutilisation et extension de l'ontologie PeGazUs (@bernard_pegazus) pour représenter les entités géographiques et leur évolution.
+
+```{mermaid}
+graph TD
+    Landmark(["Entité géographique <br/> <small>peg:Landmark</small>"]):::class_
+    TypeLandmark(["Type d’entité géographique<br/><small>peg:LandmarkType</small>"]):::skos
+    Attribut(["Attribut<br/><small>peg:Attribute</small>"]):::class_
+    TypeAttribut(["Type d’attribut<br/><small>peg:AttributeType</small>"]):::skos
+    AttributVersion(["Version d’attribut<br/><small>peg:AttributeVersion</small>"]):::class_
+    Value["Valeur<br/><small>Literal</small>"]:::literal
+
+    Landmark -- "a pour attribut" --> Attribut
+    Landmark -- "est un repère de type" --> TypeLandmark
+    Attribut -- "est un attribut de type" --> TypeAttribut
+    Attribut -- "a pour version" --> AttributVersion
+    AttributVersion -- "a pour valeur" --> Value
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+:::
+
+:::{.column width="50%" .nonincremental}
+Extension :
+
+* Ajout des types de repères propres au cadastre: parcelle, section, canton (ancien), arrondissement, commune, département.
+* Ajout des types d'attributs propres au cadastre : contribuable, adresse associés à la parcelle, nature.
+:::
+::::
+
+## Repères géographiques et leur évolution
+
+Exemple : nature d'une parcelle.
+
+```{mermaid}
+graph TD
+    Landmark(["C-119<br/> <small>peg:Landmark</small>"]):::class_
+    TypeLandmark(["Parcelle<br/><small>peg:LandmarkType</small>"]):::skos
+    Attribut(["Attribut<br/><small>peg:Attribute</small>"]):::class_
+    TypeAttribut(["Nature de parcelle<br/><small>peg:AttributeType</small>"]):::skos
+    AttributVersion(["Version d’attribut<br/><small>peg:AttributeVersion</small>"]):::class_
+    Value(["Pré<br/><small>tbl:Nature</small>"]):::skos
+
+    Landmark -- "a pour attribut" --> Attribut
+    Landmark -- "est un repère de type" --> TypeLandmark
+    Attribut -- "est un attribut de type" --> TypeAttribut
+    Attribut -- "a pour version" --> AttributVersion
+    AttributVersion -- "a pour nature" --> Value
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+
+## Repères géographiques et leur évolution
+
+Exemple : évolution de la nature d'une parcelle.
+
+::: {.mermaid-fit style="--h: 600px; --zoom: 1.2"}
+```{mermaid}
+graph TD
+    Landmark(["C-119<br/> <small>peg:Landmark</small>"]):::class_
+    TypeLandmark(["Parcelle<br/><small>peg:LandmarkType</small>"]):::skos
+    Attribut(["Attribut<br/><small>peg:Attribute</small>"]):::class_
+    TypeAttribut(["Nature de parcelle<br/><small>peg:AttributeType</small>"]):::skos
+    AttributVersion(["Version d’attribut<br/><small>peg:AttributeVersion</small>"]):::class_
+    Value(["Pré<br/><small>tbl:Nature</small>"]):::skos
+    Change(["Changement<br/><small>peg:Change</small>"]):::class_
+    AttributVersion2(["Version d’attribut<br/><small>peg:AttributeVersion</small>"]):::class_
+    Value2(["Maison<br/><small>tbl:Nature</small>"]):::skos
+    Evenement(["Evènement<br/><small>peg:Event</small>"]):::class_
+    Date(["Date<br/><small>time:TimeInstant</small>"]):::class_
+    DateInst["‘1836’"]:::literal
+
+    Landmark -- "a pour attribut" --> Attribut
+    Landmark -- "est un repère de type" --> TypeLandmark
+    Attribut -- "est un attribut de type" --> TypeAttribut
+    Attribut -- "a pour version" --> AttributVersion
+    Attribut -- "a pour version" --> AttributVersion2
+    AttributVersion -- "a pour nature" --> Value
+    AttributVersion2 -- "a pour nature" --> Value2
+    AttributVersion -- "avant" --> Change
+    AttributVersion2 -- "après" --> Change
+    Change -- "dépend de" --> Evenement
+    Evenement -- "a pour valeur temporelle" --> Date
+    Date -- "a pour timestamp" --> DateInst
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+
+:::
+
+## Contribuables
+::::{.columns}
+:::{.column width="50%" .nonincremental}
+<figure>
+    <figcaption>Berthoty Joseph Vve à Mont Dauphin<br/><em>Matrice des propriétés foncières, Mont-Dauphin. Source: AD05.</em></figcaption>
+    <img src="imgs/p2/05_873_9.png">
+</figure>
+
+<figure>
+    <figcaption>Frézet Joseph fils Vincent à Mont Dauphin<br/><em>Matrice des propriétés bâties, Mont Dauphin. Source: AD05.</em></figcaption>
+    <img src="imgs/p2/05_874_13.png">
+</figure>
+
+<figure>
+    <figcaption>Berthelé enf: Jn Mie Keranchas<br/><em>Etats de sections, Ouessant. Source: AD29.</em></figcaption>
+    <img src="imgs/p2/29_156_04_02.png" alt="Ouessant ETS">
+</figure>
+:::
+
+:::{.column width="50%" .nonincremental}
+<figure>
+    <figcaption>Berthier Alexandre Prince de neufchâtel à Gros Bois<br/><em>Matrice des propriétés bâties et non bâties, Marolles-en-Brie. Source: AD94.</em></figcaption>
+    <img src="imgs/p2/94_3P388_4.png">
+</figure>
+
+<figure>
+    <figcaption>La Commune de Marolles<br/><em>Matrice des propriétés bâties et non bâties, Marolles-en-Brie. Source: AD94.</em></figcaption>
+    <img src="imgs/p2/94_3P388_10.png">
+</figure>
+
+<figure>
+    <figcaption>Gaulin auguste époux Barrué 170 rue Michel Bizot à Paris<br/><em>Matrice des propriétés bâties, L'Haÿ. Source: AD94.</em></figcaption>
+    <img src="imgs/p2/94_3P284_23.png">
+</figure>
+:::
+::::
+
+## Contribuables
+
+::: {.mermaid-fit style="--h: 580px; --zoom: 1.2"}
+```{mermaid}
+%%{init: {"flowchart": {"rankSpacing": 25, "nodeSpacing": 8}}}%%
+graph LR
+    Contribuable(["Contribuable<br/> <small>tbl:Taxpayer</small>"]):::class_
+    Landmark(["Adresse de contribuable<br/><small>peg:Landmark</small>"]):::class_
+
+    Label["Label de contribuable"]:::literal
+    OrganizationName["Nom d’organisation"]:::literal
+    LastName["Nom"]:::literal
+    FirstNames["Prénom.s"]:::literal
+    BirthName["Nom de naissance"]:::literal
+    Activity["Profession / Activité"]:::literal
+    Adresse["Adresse"]:::literal
+    ChildrenFirstNames["Prénom.s d’un enfant"]:::literal
+    SpouseFirstNames["Prénom.s du conjoint"]:::literal
+    ParentFirstNames["Prénom.s d’un parent"]:::literal
+    FamilyStatus["Statut familial"]:::literal
+    Status["Statut de contribuable"]:::literal
+    Titre["Titre de civilité ou noblesse"]:::literal
+    
+    %% Valeurs empilées verticalement, en quinconce :
+    %% liens courts (-->) et longs (--->) en alternance = petit décalage horizontal
+    Contribuable -- "label" --> Label
+    Contribuable -- "nom" --> LastName
+    Contribuable -- "nom de naissance" --> BirthName
+    Contribuable -- "prénom.s" --> FirstNames 
+    Contribuable -- "statut familial" --> FamilyStatus
+    Contribuable -- "nom d’organisation" --> OrganizationName
+    Contribuable -- "profession / activité" ---> Activity 
+    Contribuable -- "adresse" ---> Adresse
+    Contribuable -- "adresse (entité)" ---> Landmark
+    Contribuable -- "prénom.s d’un enfant" ---> ChildrenFirstNames
+    Contribuable -- "prénom.s du conjoint" ---> SpouseFirstNames
+    Contribuable -- "prénom.s du parent" ---> ParentFirstNames
+
+    Contribuable -- "statut" --> Status
+    Contribuable -- "titre" --> Titre
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+:::
+
+## Contribuables
+:::: {.columns}
+:::{.column width="40%" .nonincremental .center}
+<figure>
+    <figcaption>Lecoeur Joseph rue de Rouen 11 à Paris.<br/><em>Source: Matrice des propriétés foncières de Gentilly, AD94.</em></figcaption>
+    <img src="imgs/p2/94_3P258_15.png" width="60%">
+</figure>
+:::
+
+:::{.column width="60%" .nonincremental .mermaid-fit style="--h: 500px; --zoom: 1.2"}
+
+```{mermaid}
+graph LR
+    Contribuable(["Lecoeur Joseph<br/> <small>tbl:Taxpayer</small>"]):::class_
+    LastName["'Lecoeur' "]:::literal
+    FirstNames["'Joseph' "]:::literal
+    Address["'rue de Rouen 11 à Paris' "]:::literal
+
+    Contribuable -- "nom" --> LastName
+    Contribuable -- "prénom.s" --> FirstNames
+    Contribuable -- "adresse" --> Address
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+:::
+::::
+
+## Contribuables
+:::: {.columns}
+:::{.column width="40%" .nonincremental .center}
+<figure>
+    <figcaption>Frézet Joseph fils Vincent à Mont Dauphin<br/><em>Matrice des propriétés bâties, Mont Dauphin. Source: AD05.</em></figcaption>
+    <img src="imgs/p2/05_874_13.png" width="100%">
+</figure>
+:::
+
+:::{.column width="60%" .nonincremental .mermaid-fit style="--h: 450px; --zoom: 1.2"}
+
+```{mermaid}
+graph LR
+    Contribuable(["Frézet Joseph<br/> <small>tbl:Taxpayer</small>"]):::class_
+    LastName["'Frézet' "]:::literal
+    FirstNames["'Joseph' "]:::literal
+    Address["'Mont Dauphin' "]:::literal
+    FamilyStatus["'fils' "]:::literal
+    ParentFirstNames["'Vincent' "]:::literal
+
+    Contribuable -- "nom" --> LastName
+    Contribuable -- "prénom.s" --> FirstNames
+    Contribuable -- "adresse" --> Address
+    Contribuable -- "statut familial" --> FamilyStatus
+    Contribuable -- "prénom.s d’un parent" --> ParentFirstNames
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+:::
+::::
+
+## Documents cadastraux et traçabilité des informations
+<figure>
+    <img src="imgs/p2/traceability.png" width="100%">
+    <figcaption></figcaption>
+</figure>
+
+<figure>
+    <img src="imgs/p2/traceability.png" width="100%">
+    <figcaption></figcaption>
+</figure>
 
 ## Et après ?
 * Objective: to organise temporally fragmented, unordered and potentially ambiguous mentions of geographical entities extracted from heterogeneous sources?

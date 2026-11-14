@@ -1,4 +1,4 @@
-# III. Reconstitution de l'évolution des entités {data-short="III. Evolution des entités"}
+# III. Reconstitution de l'évolution des parcelles {data-short="III. Evolution des entités"}
 
 ## Point de départ
 * Connaissances extraites des documents et structurées selon notre vocabulaire

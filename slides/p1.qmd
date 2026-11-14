@@ -1,105 +1,330 @@
 # I. Le cadastre ancien: documents, problématiques et zones d'études {data-short="I. Le cadastre ancien"}
 
-## Vue d'ensemble des documents
-* 
+## Présentation générale des documents
+::: {.nonincremental}
+* Une commune possède au moins un corpus cadastral (= même numérotation du parcellaire).
+* Tableau d'assemblage : découpage de la commune en sections.
+:::
 
-## Parcourir le corpus cadastral: exemple
+:::: {.columns}
+::: {.column width="50%"}
+<center>
+    <figure>
+        <img src="imgs/p1/marolles_ets.png" height="500px" />
+        <figcaption>Tableau d'assemblage de Marolles-en-Brie (1810).<br/>Source : Archives Départementales du Val-de-Marne (94), 3P 1193.</figcaption>
+    </figure>
+</center>
 
-## Un corpus hétérogène...
-### Etats de sections
-* Exemples de tableaux annotés avec les colonnes
+:::
 
-## Un corpus hétérogène...
-### Matrices
-- 5 grands types de matrices antérieures à la loi de rénovation cadastrale de 1930
-```mermaid
+::: {.column width="50%"}
+<center>
+    <figure>
+        <img src="imgs/p1/FRAD005_3P_00550_0001_1.JPG" height="500px" />
+        <figcaption>Tableau d'assemblage d'Eygliers (1830).<br/>Source : Archives Départementales des Hautes-Alpes (05), 3P 550.</figcaption>
+    </figure>
+</center>
+:::
+::::
 
-```
+## Présentation générale des documents
+
+<center>
+    <figure>
+        <img src="imgs/p1/pres_corpus_p1.png" height="800px" />
+        <figcaption>Documents décrivants l'état initial du parcellaire. Source: AD94.</figcaption>
+    </figure>
+</center>
+
+## Présentation générale des documents
+
+<center>
+    <figure>
+        <img src="imgs/p1/pres_corpus_p2.png" height="800px" />
+        <figcaption>L'évolution des informations sur le parcellaire (revenu, contribuable etc.) est consignée dans les matrices. Source: AD94.</figcaption>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+Exemple de parcelle C-119 à Marolles-en-Brie (94).
+
+<center>
+    <figure>
+        <img src="imgs/p1/c191.png" width="80%" />
+        <figcaption><br/>Source : Archives Départementales du Val-de-Marne (94), 3P 1197.</figcaption>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+<center>
+    <figure>
+        <img src="imgs/p1/ex_1_org.png" height="700px" />
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+Evolution de la parcelle C-119 à Marolles-en-Brie
+<center>
+    <figure>
+        <img src="imgs/p1/ex_1_timeline.png" width="100%"/>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+<center>
+    <figure>
+        <img src="imgs/p1/ex_2_org.png" height="700px" />
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+Evolution de la parcelle C-119 à Marolles-en-Brie
+<center>
+    <figure>
+        <img src="imgs/p1/ex_2_timeline.png" width="100%"/>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+<center>
+    <figure>
+        <img src="imgs/p1/ex_3_org.png" height="700px" />
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+Evolution de la parcelle C-119 à Marolles-en-Brie
+<center>
+    <figure>
+        <img src="imgs/p1/ex_3_timeline.png" width="100%"/>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+<center>
+    <figure>
+        <img src="imgs/p1/ex_4_org.png" height="700px" />
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+Evolution de la parcelle C-119 à Marolles-en-Brie
+<center>
+    <figure>
+        <img src="imgs/p1/ex_4_timeline.png" width="100%"/>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+<center>
+    <figure>
+        <img src="imgs/p1/ex_5_org.png" height="700px" />
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+Evolution de la parcelle C-119 à Marolles-en-Brie
+<center>
+    <figure>
+        <img src="imgs/p1/ex_5_timeline.png" width="100%"/>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+Toutes les matrices sont ainsi parcourues...
+
+<center>
+    <figure>
+        <img src="imgs/p1/few_moments.png" width="100%"/>
+    </figure>
+</center>
+
+## Reconstitution de l'évolution d'une parcelle
+
+... pour aboutir à la reconstruction complète de l'historique de la parcelle, **attribut par attribut**.
+
+<center>
+    <figure>
+        <img src="imgs/p1/ex_6_timeline.png" width="100%"/>
+    </figure>
+</center>
 
 ## Questions de recherche
-1. Comment représenter les connaissances sur les parcelles et leur évolution de façon homogène à partir de documents hétérogènes ?
-2. Quel méthode utiliser pour organiser ces connaissances isolées sur chaque parcelle selon une logique adaptée à l'échelle de leurs propriétés (contribuable, nature, adresse etc.)?
-3. Comment extraire automatiquement les informations à partir des tables manuscrites (contenu et à la structure variable) ?
+::: {.nonincremental}
+1. Comment **représenter les connaissances sur les parcelles et leur évolution de façon homogène** à partir de documents hétérogènes ?
+<center>
+    <figure>
+        <img src="imgs/p1/these_plan_p1.png" width="80%"/>
+    </figure>
+</center>
+:::
 
-## Contributions principales
-1. développement d'un vocabulaire (ontologie)
-2. développement processus d'organisation 
-    * connaissances éparses -> connaissances liées et organisées
-3. développement processus d'extraction et d'annotation avec l'ontologie
-    * image -> connaissances
+## Questions de recherche
+::: {.nonincremental}
+2. Quel **méthode utiliser pour organiser les connaissances isolées sur chaque parcelle suivant une logique adaptée** pour chaque attribut (contribuable, nature, adresse etc.)?
+<center>
+    <figure>
+        <img src="imgs/p1/these_plan_p2.png" width="80%"/>
+    </figure>
+</center>
+:::
 
-## Documents cadastraux numérisés
-* Inventaire réalisé au printemps 2024, partiellement actualisé en 2025 et 2026.
-```{python}
-#| echo: false
-import pandas as pd
-import plotly.express as px
+## Questions de recherche
+::: {.nonincremental}
+3. Comment **extraire automatiquement les informations à partir des tables manuscrites** (contenu et à la structure variable) ?
+<center>
+    <figure>
+        <img src="imgs/p1/these_plan_p3.png" width="80%"/>
+    </figure>
+</center>
+:::
 
-df = pd.read_csv("../data/inventaires_des_cadastres_anciens_en_ligne.csv")
+## Zones d'étude
+### Val-de-Marne (anciennement Seine et Seine-et-Oise)
+:::: {.columns}
+::: {.nonincremental .column width="60%"}
+**L'Haÿ**
 
-cols = [
-    "Plans nap (TA + P)",
-    "Etats de sections",
-    "Matrices"
-]
+```{mermaid}
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    tickInterval 10year
 
-# Count non-empty cells (ignoring whitespace-only values)
-counts = df[cols].apply(lambda s: s.astype("string").str.strip().replace("", pd.NA).notna().sum())
+    section Etat initial (c1)
+    .                          :debut, 1800-01-01, 0d
+    Plans parcellaires         :milestone, plan, 1811-01-01, 0d
 
-fig = px.bar(
-    x=counts.index,
-    y=counts.values,
-    text=counts.values,
-    labels={"x": "Document", "y": "Nombre de départements"},
-)
-#Add a title
-fig.update_layout(title_text="Type de document cadastral", title_x=0.5)
-fig.update_traces(textposition="outside", cliponaxis=False)
-fig.update_layout(xaxis_tickangle=-35, height=600, margin=dict(t=60, b=20, l=40, r=20))
-fig.show()
+    section Evolution (c1)
+    M. des propriétés bâties et non bâties :mat1, 1814-01-01, 1841-06-30
+
+    section Etat initial (c2)
+    Plans parcellaires       :milestone, plan2, 1845-01-01, 0d
+    Etats de sections          :milestone, etat2, 1842-01-01, 0d
+
+    section Evolution (c2)
+    M. des propriétés foncières (non bâties à partir de 1882) :mat2, 1841-07-01, 1914-12-31
+    M. des propriétés non bâties                 :mat3, 1914-01-01, 1931-12-31
+    M. des propriétés bâties                                  :mat4, 1882-01-01, 1910-12-31
+    M. propriétés bâties                                  :mat5, 1911-01-01, 1931-12-31
 ```
+:::
 
-## Zones d'études
-* Carte
+::: {.column width="40%"}
+<figure style="text-align:center">
+    <img src="imgs/p1/FRAD094_3P_001074.jpg" width="100%" />
+    <figcaption>Plan parcellaire de la section A de L'Haÿ (1845).<br/>Source : Archives Départementales du Val-de-Marne (94), <br/>3P 1074.</figcaption>
+</figure>
+:::
+::::
 
-## Zones d'études
-### Gentilly
-* Département actuel: Val-de-Marne ; anciennement: Seine.
-* Deux cadastres:
-    * - :
-    * - :
-* Portion nord du territoire initial annexée à Paris en XX
-|Plan parcellaire|Etat de section|Matrices|
-|--|--|--|
-|V|X|V|
--> Etats de sections manquants (partie Nord <i>a minima</i>)
-* Etude centrée sur le quartier situé entre la Butte-aux-Cailles et la place d'Italie
+## Zones d'étude
+### Val-de-Marne (anciennement Seine et Seine-et-Oise)
+:::: {.columns}
+::: {.nonincremental .column width="60%"}
+**Gentilly**
 
-## Zones d'études
-### L'Haÿ
-* Département actuel: Val-de-Marne ; anciennement: Seine.
-* Deux cadastres:
-    * - :
-    * - :
-* Etude centrée sur une section
-|Plan parcellaire|Etat de section|Matrices|
-|--|--|--|
-|V|V|V|
+```{mermaid}
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    tickInterval 10year
 
-## Zones d'études
-### Mont-Dauphin
-* Département: Hautes-Alpes
-* Un cadastre ancien (-)
-* Etude centrée sur la commune
-|Plan parcellaire|Etat de section|Matrices|
-|--|--|--|
-|V|V|V|
+    section Etat initial (c1)
+    .                          :debut, 1800-01-01, 0d
+    Plans parcellaires         :milestone, plan, 1811-01-01, 0d
 
-## Zones d'études
-### Ouessant
-* Département: Finistère
-* Un cadastre ancien (1842-1975)
-* Etude centrée sur plusieurs quartiers
-|Plan parcellaire|Etat de section|Matrices|
-|--|--|--|
-|V|V|X|
+    section Evolution (c1)
+    M. des propriétés bâties et non bâties :mat1, 1813-01-01, 1836-06-30
+
+    section Etat initial (c2)
+    Plans parcellaires       :milestone, plan2, 1845-01-01, 0d
+    Etats de sections          :milestone, etat2, 1847-01-01, 0d
+
+    section Evolution (c2)
+    M. des propriétés foncières :mat2, 1836-07-01, 1848-06-30
+    M. des propriétés foncières :mat3, 1848-07-01, 1860-12-31
+    M. des propriétés foncières (non bâties à partir de 1882)      :mat4, 1861-01-01, 1913-12-31
+    M. des propriétés bâties                              :mat5, 1882-01-01, 1910-12-31
+    M. des propriétés bâties                                  :mat6, 1911-01-01, 1941-12-31
+    M. des propriétés non bâties                                  :mat7, 1914-01-01, 1941-12-31
+```
+:::
+
+::: {.column width="40%"}
+<figure style="text-align:center">
+    <img src="imgs/p1/FRAD094_3P_001041.jpg" height="500px" />
+    <figcaption>Plan parcellaire de Gentilly, section B (1811).<br/>Source : Archives Départementales du Val-de-Marne (94), <br/>3P 1041.</figcaption>
+</figure>
+:::
+::::
+
+## Zones d'étude
+### Hautes-Alpes
+:::: {.columns}
+
+::: {.column width="60%" .nonincremental}
+**Mont-Dauphin**
+
+```{mermaid}
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    tickInterval 10year
+
+    section Etat initial
+    Plan parcellaire         :milestone, plan, 1830-01-01, 0d
+    Etat de section          :milestone, etat, 1830-01-01, 0d
+
+    section Evolution
+    Matrice des propriétés foncières (non bâties à partir de 1882) :mat1, 1830-01-01, 1911-12-31
+    Matrice des propriétés bâties                                  :mat2, 1882-01-01, 1911-12-31
+```
+:::
+
+::: {.column width="40%"}
+<figure style="text-align:center">
+    <img src="imgs/p1/FRAD005_3P_00872_0001.JPG" width="100%" />
+    <figcaption>Plan parcellaire de Mont-Dauphin, section unique (1830).<br/>Source : Archives Départementales des Hautes-Alpes (05), <br/>3P 872.</figcaption>
+</figure>
+:::
+::::
+
+## Zones d'étude
+### Finistère
+
+:::: {.columns}
+::: {.column width="60%" .nonincremental}
+**Ouessant**
+
+```{mermaid}
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    tickInterval 10year
+
+    section Etat initial
+    Plan parcellaire         :milestone, plan, 1842-11-04, 0d
+    Etats de sections          :milestone, etat, 1844-01-01, 0d
+
+    section Evolution
+    Matrice des propriétés foncières (non bâties à partir de 1882) :mat1, 1844-01-01, 1914-06-30
+    Matrice des propriétés bâties                                  :mat2, 1882-01-01, 1911-12-31
+    Matrice des propriétés non bâties                              :mat3, 1911-01-01, 1973-12-31
+    Matrice des propriétés bâties                                  :mat4, 1914-07-01, 1973-12-31
+```
+:::
+::: {.column width="40%"}
+<figure style="text-align:center">
+    <img src="imgs/p1/FRAD029_3P156_01_26.jpg" height="500px" />
+    <figcaption>Plan parcellaire de Ouessant, section K, feuille 1 (1842).<br/>Source : Archives Départementales du Finistère (29),<br/>3P 156 01 26.</figcaption>
+</figure>
+:::
+::::

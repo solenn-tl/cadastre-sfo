@@ -1,0 +1,37 @@
+/* Frises chronologiques (diagrammes Mermaid gantt)
+   - les identifiants de tâches (plan, etat, mat1, mat2...) deviennent l'id du <rect>
+   - les dates unitaires sont déclarées avec le tag "milestone" => losange */
+
+svg rect[id^="plan"] { fill: #25eb7e !important; stroke: #10a317 !important; }
+svg rect[id^="etat"] { fill: #6b97f5 !important; stroke: #406eeb !important; }
+svg rect[id^="mat"]  { fill: #da7944 !important; stroke: #ea580c !important; }
+
+/* Tâche invisible servant uniquement à décaler le début de l'axe
+   (ex. ":debut, 1800-01-01, 0d" => la frise commence en 1800) */
+svg [id^="debut"] { display: none !important; }
+
+/* Lisibilité : halo semi-opaque derrière les libellés pour masquer
+   les barres verticales de la grille (le SVG ne permet pas de fond CSS
+   sur un <text>, on dessine donc un contour épais sous le remplissage) */
+svg .taskTextOutsideRight,
+svg .taskTextOutsideLeft,
+svg .sectionTitle,
+svg .grid .tick text {
+  paint-order: stroke fill;
+  stroke: rgba(255, 255, 255, 0.85) !important;
+  stroke-width: 6px !important;
+  stroke-linejoin: round;
+}
+
+/* Grille plus discrète */
+svg .grid .tick line {
+  stroke-opacity: 0.5;
+}
+
+/* Losange pour les dates unitaires (jalons) */
+svg rect.milestone {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(45deg) scale(0.8) !important;
+  stroke-width: 2px;
+}

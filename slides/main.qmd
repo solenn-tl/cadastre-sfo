@@ -7,15 +7,21 @@ author:
       - "Thèse réalisée au LASTIG, Université Gustave Eiffel, IGN-Géodata Paris"
 date: 2026-11-16
 date-format: short
+title-slide-attributes:
+  data-background-image: imgs/FRAD029_3P156_01_26.jpg
+  data-background-size: cover
+  data-background-opacity: "0.35"
 lang: fr
 filters:
   - incremental-slides.lua
+  - web-images.lua
 bibliography: references.bib
 format:
   revealjs:
-    incremental: true
-    css: custom.scss
+    #incremental: true
+    css: [custom.scss, frises.css]
     theme: [default, custom.scss]
+    mermaid-format: svg
     width: 1600
     height: 900
     #margin-top: 0.06
@@ -25,8 +31,14 @@ format:
     slide-number: true
     toc-depth: 1
     toc-title: "Plan"
-    include-after-body: steps-header.html
+    include-after-body: [steps-header.html, zoom-images.html]
     embed-resources: true
+  html:
+    css: frises.css
+jupyter: python3
+execute:
+  echo: false
+  warning: false
 ---
 
 {{< include intro.qmd >}}

@@ -1,3 +1,41 @@
 # Conclusion
 
 ## Perspectives
+
+## Documents cadastraux numérisés
+* Inventaire réalisé au printemps 2024, partiellement actualisé en 2025 et 2026.
+```{python}
+#| echo: false
+import pandas as pd
+import plotly.express as px
+
+df = pd.read_csv("../data/inventaires_des_cadastres_anciens_en_ligne.csv")
+
+def_arch_departementales = df[df["Archives"] == "Départementales"]
+
+cols = [
+    "Plans nap (TA + P)",
+    "Etats de sections",
+    "Matrices"
+]
+
+# Count non-empty cells (ignoring whitespace-only values)
+counts = df[cols].apply(lambda s: s.astype("string").str.strip().replace("", pd.NA).notna().sum())
+
+fig = px.bar(
+    x=counts.index,
+    y=counts.values,
+    text=counts.values,
+    labels={"x": "Document", "y": "Nombre de départements"},
+)
+#Add a title
+fig.update_layout(title_text="Type de document", title_x=0.5)
+fig.update_traces(textposition="outside", cliponaxis=False)
+fig.update_layout(xaxis_tickangle=-35, height=600, margin=dict(t=60, b=20, l=40, r=20))
+fig.show()
+```
+
+## Références
+
+::: {#refs}
+:::

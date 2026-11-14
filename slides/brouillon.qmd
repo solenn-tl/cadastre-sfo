@@ -1,0 +1,14 @@
+```{mermaid}
+%%{init: {"flowchart": {"rankSpacing": 60, "htmlLabels": false}}}%%
+flowchart LR
+  S(["Plans<br/>États de sections"]):::start
+  M[[Matrices]]:::arrow
+  E(["Cadastre suivant"]):::next
+
+  S ======== M ========> E
+
+  classDef start fill:#A7EBAA,color:#128723,stroke:none,font-size:40px;
+  classDef arrow fill:none,stroke:none,font-style:italic,color:#000,font-size:40px;
+  classDef next fill:#EBB0A7,color:#B32607,stroke:none,font-size:40px;
+  linkStyle default stroke:#000,stroke-width:4px;
+```

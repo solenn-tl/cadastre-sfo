@@ -1,6 +1,6 @@
 /*-- scss:defaults --*/
 
-$presentation-font-size-root: 36px;
+$presentation-font-size-root: 34px;
 $presentation-h1-font-size: 2.2em;
 $presentation-h2-font-size: 1.8em;
 $presentation-h3-font-size: 1.4em;
@@ -91,4 +91,76 @@ $presentation-h3-font-size: 1.4em;
 .reveal .slides section .cell-output-display,
 .reveal .slides section .plotly-graph-div {
   max-height: 100%;
+}
+
+//// Mermaid
+.mermaid marker {
+  overflow: visible;            // stops the enlarged head from being cut off
+}
+.mermaid marker path,
+.mermaid .arrowheadPath {
+  fill: #a0703c !important;
+  stroke: #a0703c !important;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(1.8);        // 1 = normal size; raise to enlarge
+}
+
+// Labels HTML de mermaid : neutralise les styles reveal (.reveal small, .reveal p)
+// pour retrouver les métriques utilisées par mermaid lors du calcul des formes,
+// sinon le texte n'est plus centré.
+.reveal svg :is(.nodeLabel, .edgeLabel, .labelBkg) {
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  small {
+    display: block;           // ligne propre : hauteur identique au calcul mermaid
+    font-size: smaller;
+    line-height: 1.5;
+    vertical-align: baseline;
+  }
+}
+
+// Taille réglable d'un diagramme : entourer le bloc mermaid de
+// ::: {.mermaid-fit style="--h: 500px; --zoom: 1.2"}
+//   --h    : hauteur du diagramme (le SVG est redimensionné pour tenir dedans)
+//   --zoom : agrandissement supplémentaire (1 = aucun)
+.reveal .mermaid-fit {
+  text-align: center;
+}
+.reveal .mermaid-fit svg {
+  max-width: 100% !important;   // annule le max-width en px injecté par mermaid
+  width: auto !important;
+  height: var(--h, auto) !important;
+  max-height: var(--h, 600px);
+  zoom: var(--zoom, 1);
+}
+//// Zoom sur les images (voir zoom-images.html)
+.reveal .slides section img:not(.no-zoom) {
+  cursor: zoom-in;
+}
+.img-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.img-zoom-overlay.visible {
+  opacity: 1;
+}
+.img-zoom-overlay img {
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  background: #fff;
 }

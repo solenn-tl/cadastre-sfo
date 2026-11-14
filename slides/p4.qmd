@@ -1,4 +1,47 @@
-# IV. Extraction et structuration automatique des informations {data-short="IV. Extraction et structuration"}
+# IV. Extraction structurée des connaissances contenues dans le cadastre ancien {data-short="IV. Extraction et structuration"}
+
+## Variabilité structurelle
+
+:::: {.columns .fullwidth}
+::: {.column width="33%"}
+<center>
+    <figure>
+        <img src="imgs/p1/etat_de_section_marolles.png" width="100%"/>
+        <figcaption>AD05, </figcaption>
+    </figure>
+</center>
+:::
+
+::: {.column width="33%"}
+Etat de section postérieur à 1820, Seine-et-Oise
+<center>
+    <figure>
+        <img src="imgs/p1/etat_de_section_marolles.png" width="100%"/>
+        <figcaption>AD05, </figcaption>
+    </figure>
+</center>
+:::
+
+::: {.column width="33%"}
+Cadastre rénové de la seine
+:::
+
+::::
+
+::: {.notes}
+- En parcourant les documents de plusieurs communes, dans plusieurs départements à différentes dates, on constate que la structure des tables a changé au cours du temps et selon les départements.
+:::
+
+## Variabilité structurelle
+
+### Matrices
+- 5 grands types de matrices antérieures à la loi de rénovation cadastrale de 1930
+
+## Vers un schéma de données unique
+
+```mermaid
+
+```
 
 ## Processus
 ```mermaid
@@ -8,7 +51,7 @@ flowchart TB
     Image((Image))
     Classifieur[Classification des images]
     Filtre[Table principale ?]
-    ExtractionStructuree[Extraction des informations<br><small>Transcription des lignes, cellules dans les colonnes d'intérêt</small>]
+    ExtractionStructuree[Extraction des informations<br><small>Transcription des lignes, cellules dans les colonnes d’intérêt</small>]
     DetectionDesEntites[Résolution des entités<br><small>Contribuables, lieux nommées, natures...</small>]
     Ontologie((Ontologie))
     KG((Connaissances<br>structurées :D))
