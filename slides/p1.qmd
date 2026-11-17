@@ -1,4 +1,4 @@
-# I. Le cadastre ancien: documents, problématiques et zones d'études {data-short="I. Le cadastre ancien"}
+# I. Le cadastre ancien : documents, problématiques et zones d'étude {data-short="I. Le cadastre ancien"}
 
 ## Présentation générale des documents
 ::: {.nonincremental}
@@ -11,7 +11,7 @@
 <center>
     <figure>
         <img src="imgs/p1/marolles_ets.png" height="500px" />
-        <figcaption>Tableau d'assemblage de Marolles-en-Brie (1810).<br/>Source : Archives Départementales du Val-de-Marne (94), 3P 1193.</figcaption>
+        <figcaption>Tableau d'assemblage de Marolles-en-Brie (1810).<br/>Source : Archives départementales du Val-de-Marne (94), 3P 1193.</figcaption>
     </figure>
 </center>
 
@@ -21,7 +21,7 @@
 <center>
     <figure>
         <img src="imgs/p1/FRAD005_3P_00550_0001_1.JPG" height="500px" />
-        <figcaption>Tableau d'assemblage d'Eygliers (1830).<br/>Source : Archives Départementales des Hautes-Alpes (05), 3P 550.</figcaption>
+        <figcaption>Tableau d'assemblage d'Eygliers (1830).<br/>Source : Archives départementales des Hautes-Alpes (05), 3P 550.</figcaption>
     </figure>
 </center>
 :::
@@ -31,8 +31,8 @@
 
 <center>
     <figure>
-        <img src="imgs/p1/pres_corpus_p1.png" height="800px" />
-        <figcaption>Documents décrivants l'état initial du parcellaire. Source: AD94.</figcaption>
+        <img src="imgs/p1/pres_corpus_p1.png" height="750px" />
+        <figcaption>Documents décrivant l'état initial du parcellaire. Source : AD94.</figcaption>
     </figure>
 </center>
 
@@ -40,135 +40,116 @@
 
 <center>
     <figure>
-        <img src="imgs/p1/pres_corpus_p2.png" height="800px" />
-        <figcaption>L'évolution des informations sur le parcellaire (revenu, contribuable etc.) est consignée dans les matrices. Source: AD94.</figcaption>
-    </figure>
-</center>
-
-## Reconstitution de l'évolution d'une parcelle
-Exemple de parcelle C-119 à Marolles-en-Brie (94).
-
-<center>
-    <figure>
-        <img src="imgs/p1/c191.png" width="80%" />
-        <figcaption><br/>Source : Archives Départementales du Val-de-Marne (94), 3P 1197.</figcaption>
+        <img src="imgs/p1/pres_corpus_p2.png" height="750px" />
+        <figcaption>L'évolution des informations sur le parcellaire (revenu, contribuable, ...) est consignée dans les matrices. Source : AD94.</figcaption>
     </figure>
 </center>
 
 ## Reconstitution de l'évolution d'une parcelle
 
-<center>
-    <figure>
-        <img src="imgs/p1/ex_1_org.png" height="700px" />
-    </figure>
-</center>
+Exemple de la parcelle C-119 à Marolles-en-Brie (94).
+<figure style="text-align:center">
+    <img src="imgs/p1/c191.png" width="80%" />
+    <figcaption><br/>Source : Archives départementales du Val-de-Marne (94), 3P 1197.</figcaption>
+</figure>
+
 
 ## Reconstitution de l'évolution d'une parcelle
 
-Evolution de la parcelle C-119 à Marolles-en-Brie
-<center>
-    <figure>
-        <img src="imgs/p1/ex_1_timeline.png" width="100%"/>
-    </figure>
-</center>
+
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_1_org.png" height="700px" />
+</figure>
 
 ## Reconstitution de l'évolution d'une parcelle
 
-<center>
-    <figure>
-        <img src="imgs/p1/ex_2_org.png" height="700px" />
-    </figure>
-</center>
+Évolution de la parcelle C-119 à Marolles-en-Brie
+<figure>
+    <img src="imgs/p1/ex_1_timeline.png" width="100%"/>
+</figure>
 
-## Reconstitution de l'évolution d'une parcelle
-Evolution de la parcelle C-119 à Marolles-en-Brie
-<center>
-    <figure>
-        <img src="imgs/p1/ex_2_timeline.png" width="100%"/>
-    </figure>
-</center>
 
 ## Reconstitution de l'évolution d'une parcelle
 
-<center>
-    <figure>
-        <img src="imgs/p1/ex_3_org.png" height="700px" />
-    </figure>
-</center>
-
-## Reconstitution de l'évolution d'une parcelle
-Evolution de la parcelle C-119 à Marolles-en-Brie
-<center>
-    <figure>
-        <img src="imgs/p1/ex_3_timeline.png" width="100%"/>
-    </figure>
-</center>
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_2_org.png" height="700px" />
+</figure>
 
 ## Reconstitution de l'évolution d'une parcelle
 
-<center>
-    <figure>
-        <img src="imgs/p1/ex_4_org.png" height="700px" />
-    </figure>
-</center>
-
-## Reconstitution de l'évolution d'une parcelle
-Evolution de la parcelle C-119 à Marolles-en-Brie
-<center>
-    <figure>
-        <img src="imgs/p1/ex_4_timeline.png" width="100%"/>
-    </figure>
-</center>
+Évolution de la parcelle C-119 à Marolles-en-Brie
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_2_timeline.png" width="100%"/>
+</figure>
 
 ## Reconstitution de l'évolution d'une parcelle
 
-<center>
-    <figure>
-        <img src="imgs/p1/ex_5_org.png" height="700px" />
-    </figure>
-</center>
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_3_org.png" height="700px" />
+</figure>
 
 ## Reconstitution de l'évolution d'une parcelle
-Evolution de la parcelle C-119 à Marolles-en-Brie
-<center>
-    <figure>
-        <img src="imgs/p1/ex_5_timeline.png" width="100%"/>
-    </figure>
-</center>
+Évolution de la parcelle C-119 à Marolles-en-Brie
+
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_3_timeline.png" width="100%"/>
+</figure>
+
+## Reconstitution de l'évolution d'une parcelle
+
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_4_org.png" height="700px" />
+</figure>
+
+## Reconstitution de l'évolution d'une parcelle
+Évolution de la parcelle C-119 à Marolles-en-Brie
+
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_4_timeline.png" width="100%"/>
+</figure>
+
+## Reconstitution de l'évolution d'une parcelle
+
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_5_org.png" height="700px" />
+</figure>
+
+## Reconstitution de l'évolution d'une parcelle
+
+Évolution de la parcelle C-119 à Marolles-en-Brie
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_5_timeline.png" width="100%"/>
+</figure>
 
 ## Reconstitution de l'évolution d'une parcelle
 
 Toutes les matrices sont ainsi parcourues...
 
-<center>
-    <figure>
-        <img src="imgs/p1/few_moments.png" width="100%"/>
-    </figure>
-</center>
+<figure style="text-align:center">
+    <img src="imgs/p1/few_moments.png" width="100%"/>
+</figure>
 
 ## Reconstitution de l'évolution d'une parcelle
 
-... pour aboutir à la reconstruction complète de l'historique de la parcelle, **attribut par attribut**.
+... pour aboutir à la reconstitution complète de l'historique de la parcelle, **attribut par attribut**.
 
-<center>
-    <figure>
-        <img src="imgs/p1/ex_6_timeline.png" width="100%"/>
-    </figure>
-</center>
+<figure style="text-align:center">
+    <img src="imgs/p1/ex_6_timeline.png" width="100%"/>
+</figure>
 
 ## Questions de recherche
+
 ::: {.nonincremental}
 1. Comment **représenter les connaissances sur les parcelles et leur évolution de façon homogène** à partir de documents hétérogènes ?
-<center>
-    <figure>
-        <img src="imgs/p1/these_plan_p1.png" width="80%"/>
-    </figure>
-</center>
+
+<figure style="text-align:center">
+    <img src="imgs/p1/these_plan_p1.png" width="80%"/>
+</figure>
 :::
 
 ## Questions de recherche
 ::: {.nonincremental}
-2. Quel **méthode utiliser pour organiser les connaissances isolées sur chaque parcelle suivant une logique adaptée** pour chaque attribut (contribuable, nature, adresse etc.)?
+2. Quelle **méthode utiliser pour organiser des connaissances isolées sur chaque attribut de chaque parcelle suivant une logique spatio-temporelle adaptée** ? 
 <center>
     <figure>
         <img src="imgs/p1/these_plan_p2.png" width="80%"/>
@@ -178,7 +159,7 @@ Toutes les matrices sont ainsi parcourues...
 
 ## Questions de recherche
 ::: {.nonincremental}
-3. Comment **extraire automatiquement les informations à partir des tables manuscrites** (contenu et à la structure variable) ?
+3. Comment **extraire automatiquement les informations à partir des tables manuscrites** (au contenu et à la structure variables) ?
 <center>
     <figure>
         <img src="imgs/p1/these_plan_p3.png" width="80%"/>
@@ -207,7 +188,7 @@ gantt
 
     section Etat initial (c2)
     Plans parcellaires       :milestone, plan2, 1845-01-01, 0d
-    Etats de sections          :milestone, etat2, 1842-01-01, 0d
+    Etats de sectionss          :milestone, etat2, 1842-01-01, 0d
 
     section Evolution (c2)
     M. des propriétés foncières (non bâties à partir de 1882) :mat2, 1841-07-01, 1914-12-31
@@ -220,7 +201,7 @@ gantt
 ::: {.column width="40%"}
 <figure style="text-align:center">
     <img src="imgs/p1/FRAD094_3P_001074.jpg" width="100%" />
-    <figcaption>Plan parcellaire de la section A de L'Haÿ (1845).<br/>Source : Archives Départementales du Val-de-Marne (94), <br/>3P 1074.</figcaption>
+    <figcaption>Plan parcellaire de la section A de L'Haÿ (1845).<br/>Source : Archives départementales du Val-de-Marne (94), <br/>3P 1074.</figcaption>
 </figure>
 :::
 ::::
@@ -246,7 +227,7 @@ gantt
 
     section Etat initial (c2)
     Plans parcellaires       :milestone, plan2, 1845-01-01, 0d
-    Etats de sections          :milestone, etat2, 1847-01-01, 0d
+    Etats de sectionss          :milestone, etat2, 1847-01-01, 0d
 
     section Evolution (c2)
     M. des propriétés foncières :mat2, 1836-07-01, 1848-06-30
@@ -260,8 +241,8 @@ gantt
 
 ::: {.column width="40%"}
 <figure style="text-align:center">
-    <img src="imgs/p1/FRAD094_3P_001041.jpg" height="500px" />
-    <figcaption>Plan parcellaire de Gentilly, section B (1811).<br/>Source : Archives Départementales du Val-de-Marne (94), <br/>3P 1041.</figcaption>
+    <img src="imgs/p1/FRAD094_3P_001041.jpg" height="600px" />
+    <figcaption>Plan parcellaire de Gentilly, section B (1811).<br/>Source : Archives départementales du Val-de-Marne (94), <br/>3P 1041.</figcaption>
 </figure>
 :::
 ::::
@@ -281,7 +262,7 @@ gantt
 
     section Etat initial
     Plan parcellaire         :milestone, plan, 1830-01-01, 0d
-    Etat de section          :milestone, etat, 1830-01-01, 0d
+    Etats de sections          :milestone, etat, 1830-01-01, 0d
 
     section Evolution
     Matrice des propriétés foncières (non bâties à partir de 1882) :mat1, 1830-01-01, 1911-12-31
@@ -292,7 +273,7 @@ gantt
 ::: {.column width="40%"}
 <figure style="text-align:center">
     <img src="imgs/p1/FRAD005_3P_00872_0001.JPG" width="100%" />
-    <figcaption>Plan parcellaire de Mont-Dauphin, section unique (1830).<br/>Source : Archives Départementales des Hautes-Alpes (05), <br/>3P 872.</figcaption>
+    <figcaption>Plan parcellaire de Mont-Dauphin, section unique (1830).<br/>Source : Archives départementales des Hautes-Alpes (05), <br/>3P 872.</figcaption>
 </figure>
 :::
 ::::
@@ -312,7 +293,7 @@ gantt
 
     section Etat initial
     Plan parcellaire         :milestone, plan, 1842-11-04, 0d
-    Etats de sections          :milestone, etat, 1844-01-01, 0d
+    Etats de sectionss          :milestone, etat, 1844-01-01, 0d
 
     section Evolution
     Matrice des propriétés foncières (non bâties à partir de 1882) :mat1, 1844-01-01, 1914-06-30
@@ -323,8 +304,8 @@ gantt
 :::
 ::: {.column width="40%"}
 <figure style="text-align:center">
-    <img src="imgs/p1/FRAD029_3P156_01_26.jpg" height="500px" />
-    <figcaption>Plan parcellaire de Ouessant, section K, feuille 1 (1842).<br/>Source : Archives Départementales du Finistère (29),<br/>3P 156 01 26.</figcaption>
+    <img src="imgs/p1/FRAD029_3P156_01_26.jpg" height="600px" />
+    <figcaption>Plan parcellaire d'Ouessant, section K, feuille 1 (1842).<br/>Source : Archives départementales du Finistère (29),<br/>3P 156 01 26.</figcaption>
 </figure>
 :::
 ::::

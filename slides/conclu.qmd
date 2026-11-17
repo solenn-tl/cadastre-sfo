@@ -1,41 +1,40 @@
 # Conclusion
 
+## Conclusion
+
+<figure style="text-align: center;">
+    <img src="imgs/p1/these_plan_p3.png" width="80%"/>
+</figure>
+
 ## Perspectives
 
-## Documents cadastraux numérisés
-* Inventaire réalisé au printemps 2024, partiellement actualisé en 2025 et 2026.
-```{python}
-#| echo: false
-import pandas as pd
-import plotly.express as px
+:::{.nonincremental}
 
-df = pd.read_csv("../data/inventaires_des_cadastres_anciens_en_ligne.csv")
+* Poursuivre le **développement de l'ontologie** ➡️
 
-def_arch_departementales = df[df["Archives"] == "Départementales"]
+* **Nouvelle version de l'algorithme de peuplement du graphe de connaissances** :  @bernard_pegazus_2026
+    * Ajout du module lié à l'ambiguité des numéros de parcelles.
 
-cols = [
-    "Plans nap (TA + P)",
-    "Etats de sections",
-    "Matrices"
-]
+* **Mise à jour de la chaîne de traitement testée avec les états de sections**
+    * Modèles d'extraction d'informations plus récents
+    * Différentes stratégies de résolution d'entités
+    * Jeux de données étendus pour l'évaluation (et l'entraînement)
 
-# Count non-empty cells (ignoring whitespace-only values)
-counts = df[cols].apply(lambda s: s.astype("string").str.strip().replace("", pd.NA).notna().sum())
-
-fig = px.bar(
-    x=counts.index,
-    y=counts.values,
-    text=counts.values,
-    labels={"x": "Document", "y": "Nombre de départements"},
-)
-#Add a title
-fig.update_layout(title_text="Type de document", title_x=0.5)
-fig.update_traces(textposition="outside", cliponaxis=False)
-fig.update_layout(xaxis_tickangle=-35, height=600, margin=dict(t=60, b=20, l=40, r=20))
-fig.show()
-```
+* **Visualisation et interrogation des graphes de connaissances**
+    * Extraction des formes et textes sur les plans pour permettre une **représentation cartographique** du graphe.
+:::
 
 ## Références
 
 ::: {#refs}
+:::
+
+## Merci pour votre attention !
+
+:::{.nonincremental}
+* Thèse : <a href="https://theses.fr/2025UEFL2118" target="_blank">https://theses.fr/2025UEFL2118</a> | Ressources : <a href="https://solenn-tl.github.io/#resources" target="_blank">https://solenn-tl.github.io/#resources</a>
+
+<figure style="text-align: center;">
+    <img src="imgs/p1/these_plan_p3.png" height="650px"/>
+</figure>
 :::

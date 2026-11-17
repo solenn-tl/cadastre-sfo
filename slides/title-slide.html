@@ -1,0 +1,42 @@
+<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$ class="quarto-title-block">
+<div class="title-slide-content">
+  <h1 class="title">$title$</h1>
+$if(subtitle)$
+  <p class="subtitle">$subtitle$</p>
+$endif$
+
+<div class="quarto-title-authors">
+$for(by-author)$
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+$if(by-author.name.literal)$$by-author.name.literal$$endif$
+</div>
+$if(by-author.affiliations)$
+    $for(by-author.affiliations)$
+    <p class="quarto-title-affiliation">$it.name$</p>
+    $endfor$
+$endif$
+</div>
+$endfor$
+</div>
+
+$if(date)$
+  <p class="date">$date$$if(colloque)$<span class="colloque-sep"> — </span><span class="colloque">$colloque$</span>$endif$</p>
+$endif$
+</div>
+
+$if(logos)$
+<div class="title-logos">
+  <div class="title-logos-group title-logos-these">
+$for(logos)$
+    <div class="title-logo">$if(it)$<img src="$it$" alt="">$endif$</div>
+$endfor$
+  </div>
+$if(logo-poste)$
+  <div class="title-logos-group title-logos-poste">
+    <div class="title-logo">$if(logo-poste)$<img src="$logo-poste$" alt="">$endif$</div>
+  </div>
+$endif$
+</div>
+$endif$
+</section>

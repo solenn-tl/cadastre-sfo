@@ -19,6 +19,62 @@ $presentation-h3-font-size: 1.4em;
   margin-bottom: 0.4em;
 }
 
+// Page de garde : contenu centré + bandeau de logos des financeurs en bas
+// (voir title-slide.html)
+.reveal .slides section#title-slide {
+  top: 0 !important;
+  height: 100%;
+}
+
+#title-slide .title-slide-content {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#title-slide .colloque {
+  font-style: italic;
+}
+
+#title-slide .title-logos {
+  position: absolute;
+  bottom: 50px; // compense le margin-top de .slides
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between; // logos de thèse à gauche, poste actuel à droite
+  align-items: center;
+}
+
+#title-slide .title-logos-group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+// Séparateur vertical discret devant le logo du poste actuel
+#title-slide .title-logos-poste {
+  padding-left: 50px;
+  border-left: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+#title-slide .title-logo {
+  width: 180px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    object-fit: contain;
+  }
+}
+
 // Steps bar at the top of each slide (see steps-header.html)
 .reveal .steps-header {
   position: absolute;
@@ -87,6 +143,51 @@ $presentation-h3-font-size: 1.4em;
   padding-left: 0;
 }
 
+//// Fiche de jeu de données (titre, date, url)
+// ::: {.dataset}
+// [Titre du jeu de données]{.dataset-title}
+// [2024]{.dataset-date}
+// [https://exemple.fr/donnees](https://exemple.fr/donnees){.dataset-url}
+// :::
+.reveal .dataset {
+  font-size: 0.7em;                       // même taille que figcaption
+  line-height: 1.35;
+  text-align: left;
+  color: #333;
+  background: rgba(23, 52, 168, 0.06);
+  border-left: 4px solid rgb(23, 52, 168);
+  border-radius: 0 6px 6px 0;
+  padding: 0.5em 0.9em;
+  margin: 0.4em 0;
+
+  p {
+    margin: 0;
+  }
+
+  .dataset-title {
+    display: block;
+    font-weight: 700;
+    color: rgb(23, 52, 168);
+  }
+
+  .dataset-date {
+    display: block;
+    color: #666;
+  }
+
+  .dataset-url,
+  a {
+    display: block;
+    color: rgb(23, 52, 168);
+    text-decoration: none;
+    word-break: break-all;               // les URL longues ne débordent pas
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 // Keep figures and plotly outputs within the slide height
 .reveal .slides section .cell-output-display,
 .reveal .slides section .plotly-graph-div {
@@ -136,6 +237,16 @@ $presentation-h3-font-size: 1.4em;
   max-height: var(--h, 600px);
   zoom: var(--zoom, 1);
 }
+// Variante pleine largeur pour les diagrammes très allongés :
+// ::: {.mermaid-fit .full-width}
+// le SVG occupe toute la largeur et sa hauteur suit ses proportions
+// (pas de boîte de hauteur fixe, donc pas de bandes blanches).
+.reveal .mermaid-fit.full-width svg {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none;
+  zoom: 1;
+}
 //// Zoom sur les images (voir zoom-images.html)
 .reveal .slides section img:not(.no-zoom) {
   cursor: zoom-in;
@@ -163,4 +274,10 @@ $presentation-h3-font-size: 1.4em;
   object-fit: contain;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   background: #fff;
+}
+
+/* Espacement des références bibliographiques */
+.reveal #refs .csl-entry {
+  margin-bottom: 0.6em;
+  line-height: 1.3;
 }

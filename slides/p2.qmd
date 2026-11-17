@@ -6,14 +6,14 @@ Un vocabulaire pour décrire l'évolution des parcelles à partir du corpus cada
 ::: {.column width="50%" .nonincremental}
 **Au préalable :**
 
-* Analyse des documents cadastraux (Val-de-Marne)
-* Etude de l'histoire du cadastre à partir de travaux d'historiens (création, principales évolutions)
-* Etat de l'art des approches de représentation de l'évolution des entités géographiques (géomatique, informatique)
+* Analyse des documents cadastraux (AD Val-de-Marne)
+* Étude de l'histoire du cadastre à partir de travaux d'historiens (création, principales évolutions) (@clergeot_recueil_2021; @vivier_debats_2021)
+* État de l'art des approches de représentation de l'évolution des entités géographiques (géomatique, web sémantique) (@kauppinen_creating_2008; @dumenieu_systeme_2015; @bernard_tsn_2017; @charles_hht_2023)
 
 :::
 ::: {.column width="50%"}
 <figure style="text-align:center">
-    <img src="imgs/p2/recueil_bnf.jpg" height="700px"/>
+    <img src="imgs/p2/recueil_bnf.jpg" height="650px"/>
     <figcaption>Page de garde du <i>Recueil de 1810</i>. Source : <a href="https://gallica.bnf.fr/ark:/12148/bpt6k96475008#">Bibliothèque nationale de France</a></figcaption>
 </figure>
 :::
@@ -22,7 +22,7 @@ Un vocabulaire pour décrire l'évolution des parcelles à partir du corpus cada
 ## Méthode
 ::::{.columns}
 ::: {.column width="50%" .nonincremental}
-**Mise en oeuvre (@peroni_samod) :**
+**Mise en œuvre (@peroni_samod) :**
 
 1. Rédaction d'une documentation illustrée d'exemples issus du cadastre ancien
 2. Implémentation de l'ontologie dans un langage formel (OWL)
@@ -30,7 +30,7 @@ Un vocabulaire pour décrire l'évolution des parcelles à partir du corpus cada
 :::
 ::: {.column width="50%"}
 <figure style="text-align:center">
-    <img src="imgs/p2/scenario.png" height="700px"/>
+    <img src="imgs/p2/scenario.png" height="650px"/>
     <figcaption>Extrait de la documentation de l'ontologie TABULAE.<br/><a href="https://github.com/solenn-tl/tabulae-ontology">github.com/solenn-tl/tabulae-ontology</a></figcaption>
 </figure>
 :::
@@ -40,7 +40,7 @@ Un vocabulaire pour décrire l'évolution des parcelles à partir du corpus cada
 
 ::::{.columns}
 :::{.column width="50%" .nonincremental}
-* Réutilisation et extension de l'ontologie PeGazUs (@bernard_pegazus) pour représenter les entités géographiques et leur évolution.
+* Réutilisation et extension de l'**ontologie PeGazUs (@bernard_pegazus)** pour représenter les entités géographiques et leur évolution.
 
 ```{mermaid}
 graph TD
@@ -66,7 +66,7 @@ graph TD
 :::{.column width="50%" .nonincremental}
 Extension :
 
-* Ajout des types de repères propres au cadastre: parcelle, section, canton (ancien), arrondissement, commune, département.
+* Ajout des types de repères propres au cadastre : parcelle, section, canton (ancien), arrondissement, commune, département.
 * Ajout des types d'attributs propres au cadastre : contribuable, adresse associés à la parcelle, nature.
 :::
 ::::
@@ -99,7 +99,7 @@ graph TD
 
 Exemple : évolution de la nature d'une parcelle.
 
-::: {.mermaid-fit style="--h: 600px; --zoom: 1.2"}
+::: {.mermaid-fit style="--h: 580px; --zoom: 1.2"}
 ```{mermaid}
 graph TD
     Landmark(["C-119<br/> <small>peg:Landmark</small>"]):::class_
@@ -111,7 +111,7 @@ graph TD
     Change(["Changement<br/><small>peg:Change</small>"]):::class_
     AttributVersion2(["Version d’attribut<br/><small>peg:AttributeVersion</small>"]):::class_
     Value2(["Maison<br/><small>tbl:Nature</small>"]):::skos
-    Evenement(["Evènement<br/><small>peg:Event</small>"]):::class_
+    Evenement(["Évènement<br/><small>peg:Event</small>"]):::class_
     Date(["Date<br/><small>time:TimeInstant</small>"]):::class_
     DateInst["‘1836’"]:::literal
 
@@ -135,38 +135,44 @@ graph TD
 
 :::
 
+## Repères géographiques et leur évolution
+<figure style="text-align:center">
+    <figcaption>Taxonomie des natures de parcelles.</figcaption>
+    <img src="imgs/p2/taxonomie_natures.png" height="700px">
+</figure>
+
 ## Contribuables
 ::::{.columns}
 :::{.column width="50%" .nonincremental}
 <figure>
-    <figcaption>Berthoty Joseph Vve à Mont Dauphin<br/><em>Matrice des propriétés foncières, Mont-Dauphin. Source: AD05.</em></figcaption>
+    <figcaption>Berthoty Joseph Vve à Mont Dauphin<br/><em>Matrice des propriétés foncières, Mont-Dauphin. Source : AD05.</em></figcaption>
     <img src="imgs/p2/05_873_9.png">
 </figure>
 
 <figure>
-    <figcaption>Frézet Joseph fils Vincent à Mont Dauphin<br/><em>Matrice des propriétés bâties, Mont Dauphin. Source: AD05.</em></figcaption>
+    <figcaption>Frézet Joseph fils Vincent à Mont Dauphin<br/><em>Matrice des propriétés bâties, Mont-Dauphin. Source : AD05.</em></figcaption>
     <img src="imgs/p2/05_874_13.png">
 </figure>
 
 <figure>
-    <figcaption>Berthelé enf: Jn Mie Keranchas<br/><em>Etats de sections, Ouessant. Source: AD29.</em></figcaption>
+    <figcaption>Berthelé enf: Jn Mie Keranchas<br/><em>États de sections, Ouessant. Source : AD29.</em></figcaption>
     <img src="imgs/p2/29_156_04_02.png" alt="Ouessant ETS">
 </figure>
 :::
 
 :::{.column width="50%" .nonincremental}
 <figure>
-    <figcaption>Berthier Alexandre Prince de neufchâtel à Gros Bois<br/><em>Matrice des propriétés bâties et non bâties, Marolles-en-Brie. Source: AD94.</em></figcaption>
+    <figcaption>Berthier Alexandre Prince de neufchâtel à Gros Bois<br/><em>Matrice des propriétés bâties et non bâties, Marolles-en-Brie. Source : AD94.</em></figcaption>
     <img src="imgs/p2/94_3P388_4.png">
 </figure>
 
 <figure>
-    <figcaption>La Commune de Marolles<br/><em>Matrice des propriétés bâties et non bâties, Marolles-en-Brie. Source: AD94.</em></figcaption>
+    <figcaption>La Commune de Marolles<br/><em>Matrice des propriétés bâties et non bâties, Marolles-en-Brie. Source : AD94.</em></figcaption>
     <img src="imgs/p2/94_3P388_10.png">
 </figure>
 
 <figure>
-    <figcaption>Gaulin auguste époux Barrué 170 rue Michel Bizot à Paris<br/><em>Matrice des propriétés bâties, L'Haÿ. Source: AD94.</em></figcaption>
+    <figcaption>Gaulin auguste époux Barrué 170 rue Michel Bizot à Paris<br/><em>Matrice des propriétés bâties, L'Haÿ. Source : AD94.</em></figcaption>
     <img src="imgs/p2/94_3P284_23.png">
 </figure>
 :::
@@ -208,7 +214,7 @@ graph LR
     Contribuable -- "adresse (entité)" ---> Landmark
     Contribuable -- "prénom.s d’un enfant" ---> ChildrenFirstNames
     Contribuable -- "prénom.s du conjoint" ---> SpouseFirstNames
-    Contribuable -- "prénom.s du parent" ---> ParentFirstNames
+    Contribuable -- "prénom.s d’un parent" ---> ParentFirstNames
 
     Contribuable -- "statut" --> Status
     Contribuable -- "titre" --> Titre
@@ -223,7 +229,7 @@ graph LR
 :::: {.columns}
 :::{.column width="40%" .nonincremental .center}
 <figure>
-    <figcaption>Lecoeur Joseph rue de Rouen 11 à Paris.<br/><em>Source: Matrice des propriétés foncières de Gentilly, AD94.</em></figcaption>
+    <figcaption>Lecoeur Joseph rue de Rouen 11 à Paris.<br/><em>Source : Matrice des propriétés foncières de Gentilly, AD94.</em></figcaption>
     <img src="imgs/p2/94_3P258_15.png" width="60%">
 </figure>
 :::
@@ -252,7 +258,7 @@ graph LR
 :::: {.columns}
 :::{.column width="40%" .nonincremental .center}
 <figure>
-    <figcaption>Frézet Joseph fils Vincent à Mont Dauphin<br/><em>Matrice des propriétés bâties, Mont Dauphin. Source: AD05.</em></figcaption>
+    <figcaption>Frézet Joseph fils Vincent à Mont Dauphin<br/><em>Matrice des propriétés bâties, Mont-Dauphin. Source : AD05.</em></figcaption>
     <img src="imgs/p2/05_874_13.png" width="100%">
 </figure>
 :::
@@ -282,15 +288,221 @@ graph LR
 ::::
 
 ## Documents cadastraux et traçabilité des informations
-<figure>
-    <img src="imgs/p2/traceability.png" width="100%">
-    <figcaption></figcaption>
+
+Représentation des documents avec l'ontologie <em>Records in Context</em> (@rico) : état de sections.
+
+:::: {.columns}
+
+:::{.column width="50%" .nonincremental}
+<figure style="text-align:center">
+    <img src="imgs/p2/depotcadastrel-hay-les-roses3p-000275frad094-3p-000275-0100.jpg" height="600px">
+        <figcaption>État de sections de L'Haÿ, 3P 275 vue 100. Source : AD94</figcaption>
+</figure>
+:::
+
+:::{.column width="50%" .nonincremental .mermaid-fit style="--h: 550px; --zoom: 1.2"}
+
+```{mermaid}
+graph TD
+    Registre(["Registre<br/> <small>rico:Instantiation</small>"]):::class_
+    Page(["Page<br/><small>rico:Instantiation</small>"]):::class_
+    Ligne(["Ligne<br/><small>rico:Instantiation</small>"]):::class_
+    TranscriptionLigne["Transcription"]:::literal
+    OrdreLigne["Rang dans page"]:::literal
+
+    Registre -- "a ou a eu pour composant" --> Page
+    Page -- "a ou a eu pour composant" --> Ligne
+    Ligne -- "rang dans doc. parent" --> OrdreLigne
+
+    Ligne -- "transcription" --> TranscriptionLigne
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+
+:::
+
+::::
+
+## Documents cadastraux et traçabilité des informations
+Traçabilité des informations (@provo).
+
+:::{.nonincremental .mermaid-fit style="--h: 550px; --zoom: 1.2"}
+```{mermaid}
+graph TD
+    Registre(["Registre<br/> <small>rico:Instantiation</small>"]):::class_
+    Page(["Page<br/><small>rico:Instantiation</small>"]):::class_
+    Ligne(["Ligne<br/><small>rico:Instantiation</small>"]):::class_
+    TranscriptionLigne["Transcription"]:::literal
+    OrdreLigne["Rang dans page"]:::literal
+
+    Landmark(["Entité géographique<br/> <small>peg:Landmark</small>"]):::class_
+    LandmarkType(["Parcelle<br/><small>peg:LandmarkType</small>"]):::skos
+
+    Registre -- "a ou a eu pour composant" --> Page
+    Page -- "a ou a eu pour composant" --> Ligne
+    Ligne -- "rang dans doc. parent" --> OrdreLigne
+
+    Ligne -- "transcription" --> TranscriptionLigne
+
+    Landmark -- "est un repère de type" --> LandmarkType
+
+    Landmark -- "dérivé de" --> Ligne
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+:::
+
+## Documents cadastraux et traçabilité des informations
+<figure style="text-align:center">
+    <img src="imgs/p2/matrice_0.png" width="75%">
+    <figcaption>Matrice des propriétés bâties de Mont-Dauphin, 3P 874 vue 8. Source : AD05</figcaption>
 </figure>
 
-<figure>
-    <img src="imgs/p2/traceability.png" width="100%">
-    <figcaption></figcaption>
+## Documents cadastraux et traçabilité des informations
+<figure style="text-align:center">
+    <img src="imgs/p2/matrice_1.png" width="75%">
+    <figcaption>Matrice des propriétés bâties de Mont-Dauphin, 3P 874 vue 8. Source : AD05</figcaption>
 </figure>
 
-## Et après ?
-* Objective: to organise temporally fragmented, unordered and potentially ambiguous mentions of geographical entities extracted from heterogeneous sources?
+## Documents cadastraux et traçabilité des informations
+<figure style="text-align:center">
+    <img src="imgs/p2/matrice_2.png" width="75%">
+    <figcaption>Matrice des propriétés bâties de Mont-Dauphin, 3P 874 vue 8. Source : AD05</figcaption>
+</figure>
+
+## Documents cadastraux et traçabilité des informations
+<figure style="text-align:center">
+    <img src="imgs/p2/matrice_3.png" width="75%">
+    <figcaption>Matrice des propriétés bâties de Mont-Dauphin, 3P 874 vue 8. Source : AD05</figcaption>
+</figure>
+
+## Documents cadastraux et traçabilité des informations
+<figure style="text-align:center">
+    <img src="imgs/p2/matrice_4.png" width="75%">
+    <figcaption>Matrice des propriétés bâties de Mont-Dauphin, 3P 874 vue 8. Source : AD05</figcaption>
+</figure>
+
+## Documents cadastraux et traçabilité des informations
+Représentation des documents avec l'ontologie <em>Records in Context</em> (@rico) : matrice.
+
+:::{.mermaid-fit style="--h: 550px; --zoom: 1.2"}
+```{mermaid}
+graph TD
+    Registre(["Registre<br/> <small>rico:Instantiation</small>"]):::class_
+    Page(["Page<br/><small>rico:Instantiation</small>"]):::class_
+    Folio(["Folio<br/><small>rico:Instantiation</small>"]):::class_
+    CompteFoncier(["Compte foncier<br/><small>rico:Instantiation</small>"]):::class_
+    ZoneContribuable(["Énoncé de contribuable<br/><small>rico:Instantiation</small>"]):::class_
+    Ligne(["Ligne<br/><small>rico:Instantiation</small>"]):::class_
+    TranscriptionContribuable["Transcription"]:::literal
+    TranscriptionLigne["Transcription"]:::literal
+    NumeroFolio["Numéro de folio"]:::literal
+    OrdreCF["Rang dans le folio"]:::literal
+    OrdreContribuable["Rang dans compte foncier"]:::literal
+    OrdreLigne["Rang dans compte foncier"]:::literal
+
+    Registre -- "a ou a eu pour composant" --> Page
+    Page -- "a ou a eu pour composant" --> Folio
+    Folio -- "a ou a eu pour composant" --> CompteFoncier
+    CompteFoncier -- "a ou a eu pour composant" --> ZoneContribuable
+    CompteFoncier -- "a ou a eu pour composant" --> Ligne
+
+    Folio -- "a pour numéro de folio" --> NumeroFolio
+    CompteFoncier -- "rang dans doc. parent" --> OrdreCF
+    ZoneContribuable -- "rang dans doc. parent" -->  OrdreContribuable
+    Ligne -- "rang dans doc. parent" --> OrdreLigne
+
+    Ligne -- "transcription" --> TranscriptionLigne
+    ZoneContribuable -- "transcription" --> TranscriptionContribuable
+
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+:::
+
+## Documents cadastraux et traçabilité des informations
+Changements de folios et de comptes fonciers.
+
+::: {.mermaid-fit style="--h: 550px; --zoom: 1.2"}
+
+```{mermaid}
+graph TD
+    Landmark(["A-51<br/> <small>peg:Landmark</small>"]):::class_
+    TypeLandmark(["Parcelle<br/><small>peg:LandmarkType</small>"]):::skos
+    Attribut(["Attribut<br/><small>peg:Attribute</small>"]):::class_
+    TypeAttribut(["Mention d’une parcelle<br/><small>peg:AttributeType</small>"]):::skos
+    AttributVersion(["Version d’attribut<br/><small>peg:AttributeVersion</small>"]):::class_
+    
+    Folio1(["Folio 7, M. des prop. bâties<br/><small>rico:Instantiation</small>"]):::class_
+    Folio2(["Folio 7, M. des prop. foncières<br/><small>rico:Instantiation</small>"]):::class_
+    Ligne(["Ligne<br/><small>rico:Instantiation</small>"]):::class_
+
+    Change1(["Changement<br/><small>peg:Change</small>"]):::class_
+    Change2(["Changement<br/><small>peg:Change</small>"]):::class_
+    Event1(["Évènement<br/><small>peg:Event</small>"]):::class_
+    Event2(["Évènement<br/><small>peg:Event</small>"]):::class_
+    Date1(["Date<br/><small>time:TimeInstant</small>"]):::class_
+    Date2(["Date<br/><small>time:TimeInstant</small>"]):::class_
+    DateValue1["‘1882’"]:::literal
+    DateValue2["‘1910’"]:::literal
+    TypeEvent1(["Ouverture de la matrice<br/><small>tbl:EventType</small>"]):::skos
+    TypeEvent2(["Clôture de la matrice<br/><small>tbl:EventType</small>"]):::skos
+
+    Landmark -- "a pour attribut" --> Attribut
+    Landmark -- "est un repère de type" --> TypeLandmark
+    Attribut -- "est un attribut de type" --> TypeAttribut
+    Attribut -- "a pour version" --> AttributVersion
+    Ligne -- "est un composant de" --> Folio1
+    AttributVersion -- "mentionné dans" --> Folio1
+    AttributVersion -- "tiré de" --> Folio2
+    AttributVersion -- "est rendu effectif par" --> Change1
+    Change1 -- "dépend de" --> Event1
+    Event1 -- "a pour valeur temporelle" --> Date1
+    Date1 -- "a pour timestamp" --> DateValue1
+    Event1 -- "a pour type d’évènement" --> TypeEvent1
+
+    AttributVersion -- "est rendu caduc par" --> Change2
+    Change2 -- "dépend de" --> Event2
+    Event2 -- "a pour valeur temporelle" --> Date2
+    Date2 -- "a pour timestamp" --> DateValue2
+    Event2 -- "a pour type d’évènement" --> TypeEvent2
+
+    classDef class_ fill:#4FA1E0,stroke:#135385,stroke-width:3px;
+    classDef skos fill:#f9f,stroke:#333,stroke-width:3px;
+    classDef literal fill:#79BD8E,stroke:#17632F,stroke-width:3px;
+```
+
+:::
+
+## Documents cadastraux et traçabilité des informations
+Valeurs spéciales renseignées dans certaines colonnes (notamment les colonnes dédiées aux reports de folios).
+
+<figure style="text-align:center">
+    <img src="imgs/p2/taxonomie_valeurs_speciales.png" height="650px">
+</figure>
+
+## Questions de recherche
+::: {.nonincremental}
+1. Comment **représenter les connaissances sur les parcelles et leur évolution de façon homogène** à partir de documents hétérogènes ? ✅
+<center>
+    <figure>
+        <img src="imgs/p1/these_plan_p1.png" width="80%"/>
+    </figure>
+</center>
+:::
+
+## Questions de recherche
+::: {.nonincremental}
+2. Quelle **méthode utiliser pour organiser des connaissances isolées sur chaque attribut de chaque parcelle suivant une logique spatio-temporelle adaptée** ? 
+<center>
+    <figure>
+        <img src="imgs/p1/these_plan_p2.png" width="80%"/>
+    </figure>
+</center>
+:::

@@ -1,10 +1,6 @@
 # Annexes
 
-## Travaux de thèse
-* *Reconstitution automatique de la généalogie des parcelles et des bâtiments*
-* Doctorat Sciences et technologies de l'information géographique
-* Laboratoire LASTIG, Institut National d'Information Géographique et Forestière (IGN), Géodata Paris, Université Gustave Eiffel
-* Octobre 2022 à Décembre 2025
-* *QR Code et lien manuscrit*
+## Documents cadastraux numérisés
+Inventaire réalisé au printemps 2024, partiellement actualisé en 2025 et 2026.
 
 ## Annotation des plans

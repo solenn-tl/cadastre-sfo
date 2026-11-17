@@ -1,6 +1,6 @@
--- Remplace imgs/... par imgs_web/... (copies allégées créées par optimize_images.py)
+-- Remplace imgs/x.png par imgs_web/x.webp (copies allégées créées par optimize_images.py)
 -- dans les images Markdown, les balises <img> HTML et les images de fond.
--- Si la copie allégée n'existe pas, le chemin original est conservé.
+-- À défaut, essaie imgs_web/x.png (anciennes copies), sinon garde le chemin original.
 
 local function exists(path)
   local f = io.open(path, "rb")
@@ -10,7 +10,10 @@ end
 
 local function web(path)
   local alt = path:gsub("^imgs/", "imgs_web/", 1)
-  if alt ~= path and exists(alt) then return alt end
+  if alt == path then return path end
+  local webp = alt:gsub("%.[^./]+$", ".webp")
+  if exists(webp) then return webp end
+  if exists(alt) then return alt end
   return path
 end
 

@@ -1,9 +1,47 @@
-# V. Autres examples {data-short="V. Autres exemples"}
+# V. Observations sur les repères géographiques mentionnés dans le cadastre {data-short="V. Complément sur les repères géographiques"}
 
-## Mont-Dauphin 
+## Adresses des contribuables et des parcelles
+**Exemple 1 : Ouessant**
 
-## Ouessant
-**Cas d'étude: localisation des mares et doués**
-* Photo de doué, début 20ème
-* Photo de lavoir
+<figure style="text-align:center">
+    <figcaption>Parcelles et bâtiments du hameau de Toulalan (Ouessant, 29) et leur nature en 1842.</figcaption>
+    <img src="imgs/p5/natures_ouessant.png" height="600px"/>
+</figure>
+
+## Adresses des contribuables et des parcelles
+**Exemple 1 : Ouessant**
+
+<figure style="text-align:center">
+    <figcaption>Adresses des contribuables disposant de parcelles dans le hameau de Toulalan (Ouessant, 29) et nombre de contribuables par adresse.</figcaption>
+    <img src="imgs/p5/toulalan.png" height="600px"/>
+</figure>
+
+## Adresses des contribuables et des parcelles
+**Exemple 2 : Mont-Dauphin**
+
+<figure style="text-align:center">
+    <figcaption>Regroupements d'adresses (de parcelles et de contribuables)dans le cadastre de Mont-Dauphin.</figcaption>
+    <img src="imgs/p5/adresses_mont_dauphin.png" height="600px"/>
+</figure>
+
+## Localisation de repères à partir des registres cadastraux
+
+<figure style="text-align:center">
+    <figcaption>Noms de lieux issus des plans (et partiellement des registres cadastraux) pouvant être associés à des lavoirs/puits/fontaines.</figcaption>
+    <img src="imgs/p5/lavoirs_lieux_dits.png" height="600px"/>
+</figure>
+
+## Localisation de repères à partir des registres cadastraux
+
+<figure style="text-align:center">
+    <figcaption>Pièce d'eau caractérisée en douet à l'aide des du registre d'états de sections.</figcaption>
+    <img src="imgs/p5/lavoirs_ex.png" height="600px"/>
+</figure>
+
+## Localisation de repères à partir des registres cadastraux
+
+<figure style="text-align:center">
+    <figcaption>Pièce d'eau caractérisée en douet à l'aide des du registre d'états de sections. Source : AD29.</figcaption>
+    <img src="imgs/p5/A-1425.png" height="600px"/>
+</figure>
 

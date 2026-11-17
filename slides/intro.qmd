@@ -1,5 +1,11 @@
 # Introduction
 
+## Licence
+
+Cette présentation est diffusée sous licence <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY SA 4.0)</a>.
+
+Les images n'ayant pas de source (à l'exception des images d'archives, ce serait un oubli) sont issues de travaux de l'auteur et diffusées sous cette même licence.
+
 ## Thèse 
 
 <div class="highlight"><center><strong>Reconstitution automatique de la généalogie des parcelles et des bâtiments à partir de sources historiques</strong></center></div>
