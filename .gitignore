@@ -1,9 +1,9 @@
 .quartoenv
-data/
+data
 README_files/
-rq/
+rq
 scripts/
 svg/
-p1_figures.draw.io
+p1_figures.drawio
 .$p1_figures.drawio.bkp
 .env
